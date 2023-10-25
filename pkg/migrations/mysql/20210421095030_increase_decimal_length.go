@@ -19,21 +19,6 @@ func upIncreaseDecimalLength(ctx context.Context, tx rockhopper.SQLExecutor) (er
 		return err
 	}
 
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `okex_klines`\nMODIFY COLUMN `volume` decimal(20,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `binance_klines`\nMODIFY COLUMN `volume` decimal(20,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `max_klines`\nMODIFY COLUMN `volume` decimal(20,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
 	return err
 }
 
@@ -41,21 +26,6 @@ func downIncreaseDecimalLength(ctx context.Context, tx rockhopper.SQLExecutor) (
 	// This code is executed when the migration is rolled back.
 
 	_, err = tx.ExecContext(ctx, "ALTER TABLE `klines`\nMODIFY COLUMN `volume` decimal(16,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `okex_klines`\nMODIFY COLUMN `volume` decimal(16,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `binance_klines`\nMODIFY COLUMN `volume` decimal(16,8) unsigned NOT NULL DEFAULT '0.00000000';")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "ALTER TABLE `max_klines`\nMODIFY COLUMN `volume` decimal(16,8) unsigned NOT NULL DEFAULT '0.00000000';")
 	if err != nil {
 		return err
 	}
