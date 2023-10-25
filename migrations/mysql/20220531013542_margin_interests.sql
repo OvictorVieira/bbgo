@@ -3,7 +3,7 @@ CREATE TABLE `margin_interests`
 (
     `gid`             BIGINT UNSIGNED          NOT NULL AUTO_INCREMENT,
 
-    `exchange`        VARCHAR(24)              NOT NULL DEFAULT '',
+    `exchange_id`     BIGINT                   NOT NULL,
 
     `asset`           VARCHAR(24)              NOT NULL DEFAULT '',
 

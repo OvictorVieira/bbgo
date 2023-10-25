@@ -19,11 +19,11 @@ CREATE TABLE `positions`
     -- trade related columns
     `trade_id`             BIGINT UNSIGNED         NOT NULL, -- the trade id in the exchange
     `side`                 VARCHAR(4)              NOT NULL, -- side of the trade
-    `exchange`             VARCHAR(12)             NOT NULL, -- exchange of the trade
+    `exchange_id`          BIGINT                  NOT NULL, -- exchange of the trade
     `traded_at`            DATETIME(3)             NOT NULL, -- millisecond timestamp
 
     PRIMARY KEY (`gid`),
-    UNIQUE KEY `trade_id` (`trade_id`, `side`, `exchange`)
+    UNIQUE KEY `trade_id` (`trade_id`, `side`, `exchange_id`)
 );
 
 -- +down

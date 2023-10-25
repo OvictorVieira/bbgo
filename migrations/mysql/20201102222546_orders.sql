@@ -3,7 +3,7 @@ CREATE TABLE `orders`
 (
     `gid`               BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
 
-    `exchange`          VARCHAR(24)             NOT NULL DEFAULT '',
+    `exchange_id`       BIGINT                  NOT NULL,
     -- order_id is the order id returned from the exchange
     `order_id`          BIGINT UNSIGNED         NOT NULL,
     `client_order_id`   VARCHAR(122)            NOT NULL DEFAULT '',
@@ -25,8 +25,8 @@ CREATE TABLE `orders`
 
     PRIMARY KEY (`gid`)
 );
-CREATE INDEX orders_symbol ON orders (exchange, symbol);
-CREATE UNIQUE INDEX orders_order_id ON orders (order_id, exchange);
+CREATE INDEX orders_symbol ON orders (exchange_id, symbol);
+CREATE UNIQUE INDEX orders_order_id ON orders (order_id, exchange_id);
 
 -- +down
 DROP INDEX orders_symbol ON orders;

@@ -5,7 +5,7 @@ CREATE TABLE `margin_repays`
 
     `transaction_id`  BIGINT UNSIGNED         NOT NULL,
 
-    `exchange`        VARCHAR(24)             NOT NULL DEFAULT '',
+    `exchange_id`     BIGINT                  NOT NULL,
 
     `asset`           VARCHAR(24)             NOT NULL DEFAULT '',
 

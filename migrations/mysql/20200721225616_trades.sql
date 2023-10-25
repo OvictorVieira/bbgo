@@ -5,7 +5,7 @@ CREATE TABLE `trades`
 
     `id`             BIGINT UNSIGNED,
     `order_id`       BIGINT UNSIGNED         NOT NULL,
-    `exchange`       VARCHAR(24)             NOT NULL DEFAULT '',
+    `exchange_id`    BIGINT                  NOT NULL,
     `symbol`         VARCHAR(20)             NOT NULL,
     `price`          DECIMAL(16, 8) UNSIGNED NOT NULL,
     `quantity`       DECIMAL(16, 8) UNSIGNED NOT NULL,
@@ -24,12 +24,12 @@ CREATE TABLE `trades`
     `pnl`            DECIMAL                 NULL,
 
     PRIMARY KEY (`gid`),
-    UNIQUE KEY `id` (`exchange`, `symbol`, `side`, `id`)
+    UNIQUE KEY `id` (`exchange_id`, `symbol`, `side`, `id`)
 );
 
-CREATE INDEX trades_symbol ON trades (exchange, symbol);
-CREATE INDEX trades_symbol_fee_currency ON trades (exchange, symbol, fee_currency, traded_at);
-CREATE INDEX trades_traded_at_symbol ON trades (exchange, traded_at, symbol);
+CREATE INDEX trades_symbol ON trades (exchange_id, symbol);
+CREATE INDEX trades_symbol_fee_currency ON trades (exchange_id, symbol, fee_currency, traded_at);
+CREATE INDEX trades_traded_at_symbol ON trades (exchange_id, traded_at, symbol);
 
 
 -- +down

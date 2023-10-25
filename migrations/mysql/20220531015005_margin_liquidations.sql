@@ -3,7 +3,7 @@ CREATE TABLE `margin_liquidations`
 (
     `gid`               BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
 
-    `exchange`          VARCHAR(24)             NOT NULL DEFAULT '',
+    `exchange_id`       BIGINT                  NOT NULL,
 
     `symbol`            VARCHAR(24)             NOT NULL DEFAULT '',
 
@@ -26,7 +26,7 @@ CREATE TABLE `margin_liquidations`
     `time`              DATETIME(3)             NOT NULL,
 
     PRIMARY KEY (`gid`),
-    UNIQUE KEY (`order_id`, `exchange`)
+    UNIQUE KEY (`order_id`, `exchange_id`)
 );
 
 -- +down

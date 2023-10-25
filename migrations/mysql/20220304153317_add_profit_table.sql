@@ -30,7 +30,7 @@ CREATE TABLE `profits`
     -- -------------------------------------------------------
     -- embedded trade data --
     -- -------------------------------------------------------
-    `exchange`             VARCHAR(24)             NOT NULL DEFAULT '',
+    `exchange_id`          BIGINT                  NOT NULL,
 
     `is_futures`           BOOLEAN                 NOT NULL DEFAULT FALSE,
 
