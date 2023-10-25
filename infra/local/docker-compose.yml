@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    container_name: database
+    command: --bind-address=0.0.0.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: bbgo
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/dump:/var/www/html/bbgo/dump
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - database-network
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - database-network
+
+networks:
+  database-network:
+    driver: bridge

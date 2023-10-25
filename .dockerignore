@@ -1,0 +1,7 @@
+/contracts
+.env.*
+/linode
+/frontend
+/desktop
+/data
+/output

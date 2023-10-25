@@ -1,0 +1,27 @@
+---
+notifications:
+  slack:
+    defaultChannel: "bbgo"
+    errorChannel: "bbgo-error"
+  switches:
+    trade: true
+    orderUpdate: true
+    submitOrder: true
+
+
+exchangeStrategies:
+  - on: max
+    marketcap:
+      interval: 1m
+      quoteCurrency: TWD
+      quoteCurrencyWeight: 0%
+      baseCurrencies:
+        - BTC
+        - ETH
+        - MATIC
+      threshold: 1%
+      # max amount to buy or sell per order
+      maxAmount: 1_000
+      queryInterval: 1h
+      orderType: LIMIT_MAKER # LIMIT_MAKER, LIMIT, MARKET
+      dryRun: true
