@@ -78,7 +78,7 @@ Since the default GOPATH is located at `~/go`, you can clone the bbgo repo into 
 
 ```shell
 mkdir -p ~/go/src/github.com/c9s
-git clone git@github.com:c9s/bbgo.git ~/go/src/github.com/OvictorVieira/bbgo
+git clone git@github.com:OvictorVieira/bbgo.git ~/go/src/github.com/OvictorVieira/bbgo
 cd ~/go/src/github.com/OvictorVieira/bbgo
 ```
 
