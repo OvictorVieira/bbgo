@@ -1,97 +1,27 @@
 -- +up
--- +begin
-CREATE TABLE `klines`
+CREATE TABLE IF NOT EXISTS `klines`
 (
-    `gid`           INTEGER PRIMARY KEY AUTOINCREMENT,
-    `exchange`      VARCHAR(10)    NOT NULL,
-    `start_time`    DATETIME(3)    NOT NULL,
-    `end_time`      DATETIME(3)    NOT NULL,
-    `interval`      VARCHAR(3)     NOT NULL,
-    `symbol`        VARCHAR(7)     NOT NULL,
-    `open`          DECIMAL(16, 8) NOT NULL,
-    `high`          DECIMAL(16, 8) NOT NULL,
-    `low`           DECIMAL(16, 8) NOT NULL,
-    `close`         DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `volume`        DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `closed`        BOOLEAN        NOT NULL DEFAULT TRUE,
-    `last_trade_id` INT            NOT NULL DEFAULT 0,
-    `num_trades`    INT            NOT NULL DEFAULT 0
+    `gid`                       BIGINT UNSIGNED                             NOT NULL AUTO_INCREMENT,
+    `user_exchanges_id`         BIGINT                                      NOT NULL,
+    `start_time`                DATETIME(3)                                 NOT NULL,
+    `end_time`                  DATETIME(3)                                 NOT NULL,
+    `interval`                  VARCHAR(3)                                  NOT NULL,
+    `symbol`                    VARCHAR(20)                                 NOT NULL,
+    `open`                      DECIMAL(20, 8)          UNSIGNED            NOT NULL,
+    `high`                      DECIMAL(20, 8)          UNSIGNED            NOT NULL,
+    `low`                       DECIMAL(20, 8)          UNSIGNED            NOT NULL,
+    `close`                     DECIMAL(20, 8)          UNSIGNED            NOT NULL DEFAULT '0.00000000',
+    `volume`                    DECIMAL(20, 8)          UNSIGNED            NOT NULL DEFAULT '0.00000000',
+    `closed`                    BOOL                                        NOT NULL DEFAULT TRUE,
+    `last_trade_id`             INT UNSIGNED                                NOT NULL DEFAULT 0,
+    `num_trades`                INT UNSIGNED                                NOT NULL DEFAULT 0,
+    `quote_volume`              DECIMAL(32, 8)                              NOT NULL DEFAULT '0.00000000',
+    `taker_buy_base_volume`     DECIMAL(32, 8)                              NOT NULL DEFAULT '0.00000000',
+    `taker_buy_quote_volume`    DECIMAL(32, 8)                              NOT NULL DEFAULT '0.00000000',
+
+    PRIMARY KEY (`gid`),
+    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)
 );
--- +end
-
-
--- +begin
-CREATE TABLE `okex_klines`
-(
-    `gid`           INTEGER PRIMARY KEY AUTOINCREMENT,
-    `exchange`      VARCHAR(10)    NOT NULL,
-    `start_time`    DATETIME(3)    NOT NULL,
-    `end_time`      DATETIME(3)    NOT NULL,
-    `interval`      VARCHAR(3)     NOT NULL,
-    `symbol`        VARCHAR(7)     NOT NULL,
-    `open`          DECIMAL(16, 8) NOT NULL,
-    `high`          DECIMAL(16, 8) NOT NULL,
-    `low`           DECIMAL(16, 8) NOT NULL,
-    `close`         DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `volume`        DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `closed`        BOOLEAN        NOT NULL DEFAULT TRUE,
-    `last_trade_id` INT            NOT NULL DEFAULT 0,
-    `num_trades`    INT            NOT NULL DEFAULT 0
-);
--- +end
-
--- +begin
-CREATE TABLE `binance_klines`
-(
-    `gid`           INTEGER PRIMARY KEY AUTOINCREMENT,
-    `exchange`      VARCHAR(10)    NOT NULL,
-    `start_time`    DATETIME(3)    NOT NULL,
-    `end_time`      DATETIME(3)    NOT NULL,
-    `interval`      VARCHAR(3)     NOT NULL,
-    `symbol`        VARCHAR(7)     NOT NULL,
-    `open`          DECIMAL(16, 8) NOT NULL,
-    `high`          DECIMAL(16, 8) NOT NULL,
-    `low`           DECIMAL(16, 8) NOT NULL,
-    `close`         DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `volume`        DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `closed`        BOOLEAN        NOT NULL DEFAULT TRUE,
-    `last_trade_id` INT            NOT NULL DEFAULT 0,
-    `num_trades`    INT            NOT NULL DEFAULT 0
-);
--- +end
-
--- +begin
-CREATE TABLE `max_klines`
-(
-    `gid`           INTEGER PRIMARY KEY AUTOINCREMENT,
-    `exchange`      VARCHAR(10)    NOT NULL,
-    `start_time`    DATETIME(3)    NOT NULL,
-    `end_time`      DATETIME(3)    NOT NULL,
-    `interval`      VARCHAR(3)     NOT NULL,
-    `symbol`        VARCHAR(7)     NOT NULL,
-    `open`          DECIMAL(16, 8) NOT NULL,
-    `high`          DECIMAL(16, 8) NOT NULL,
-    `low`           DECIMAL(16, 8) NOT NULL,
-    `close`         DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `volume`        DECIMAL(16, 8) NOT NULL DEFAULT 0.0,
-    `closed`        BOOLEAN        NOT NULL DEFAULT TRUE,
-    `last_trade_id` INT            NOT NULL DEFAULT 0,
-    `num_trades`    INT            NOT NULL DEFAULT 0
-);
--- +end
-
--- +begin
-CREATE INDEX `klines_end_time_symbol_interval` ON `klines` (`end_time`, `symbol`, `interval`);
-CREATE INDEX `binance_klines_end_time_symbol_interval` ON `binance_klines` (`end_time`, `symbol`, `interval`);
-CREATE INDEX `okex_klines_end_time_symbol_interval` ON `okex_klines` (`end_time`, `symbol`, `interval`);
-CREATE INDEX `max_klines_end_time_symbol_interval` ON `max_klines` (`end_time`, `symbol`, `interval`);
--- +end
-
 
 -- +down
-DROP INDEX IF EXISTS `klines_end_time_symbol_interval`;
-DROP TABLE IF EXISTS `binance_klines`;
-DROP TABLE IF EXISTS `okex_klines`;
-DROP TABLE IF EXISTS `max_klines`;
 DROP TABLE IF EXISTS `klines`;
-

@@ -1,23 +1,24 @@
 -- +up
 CREATE TABLE `margin_repays`
 (
-    `gid`             BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
+    `gid`                   BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
 
-    `transaction_id`  BIGINT UNSIGNED         NOT NULL,
+    `transaction_id`        BIGINT UNSIGNED         NOT NULL,
 
-    `exchange_id`     BIGINT                  NOT NULL,
+    `user_exchanges_id`     BIGINT                  NOT NULL,
 
-    `asset`           VARCHAR(24)             NOT NULL DEFAULT '',
+    `asset`                 VARCHAR(24)             NOT NULL DEFAULT '',
 
-    `isolated_symbol` VARCHAR(24)             NOT NULL DEFAULT '',
+    `isolated_symbol`       VARCHAR(24)             NOT NULL DEFAULT '',
 
     -- quantity is the quantity of the trade that makes profit
-    `principle`       DECIMAL(16, 8) UNSIGNED NOT NULL,
+    `principle`             DECIMAL(16, 8) UNSIGNED NOT NULL,
 
-    `time`            DATETIME(3)             NOT NULL,
+    `time`                  DATETIME(3)             NOT NULL,
 
     PRIMARY KEY (`gid`),
-    UNIQUE KEY (`transaction_id`)
+    UNIQUE KEY (`transaction_id`),
+    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)
 );
 
 -- +down

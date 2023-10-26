@@ -1,7 +1,0 @@
--- +up
-ALTER TABLE `klines`
-MODIFY COLUMN `symbol` VARCHAR(10) NOT NULL;
-
--- +down
-ALTER TABLE `klines`
-MODIFY COLUMN `symbol` VARCHAR(7) NOT NULL;

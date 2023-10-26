@@ -1,10 +1,12 @@
 -- +up
--- +begin
-SELECT 1;
--- +end
+ALTER TABLE trades
+    CHANGE fee fee DECIMAL(16, 8) NOT NULL;
+
+ALTER TABLE profits
+    CHANGE fee fee DECIMAL(16, 8) NOT NULL;
+
+ALTER TABLE profits
+    CHANGE fee_in_usd fee_in_usd DECIMAL(16, 8);
 
 -- +down
-
--- +begin
 SELECT 1;
--- +end

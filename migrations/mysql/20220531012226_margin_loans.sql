@@ -5,7 +5,7 @@ CREATE TABLE `margin_loans`
 
     `transaction_id`  BIGINT UNSIGNED         NOT NULL,
 
-    `exchange_id`     BIGINT                  NOT NULL,
+    `user_exchanges_id`     BIGINT                  NOT NULL,
 
     `asset`           VARCHAR(24)             NOT NULL DEFAULT '',
 
@@ -17,7 +17,8 @@ CREATE TABLE `margin_loans`
     `time`            DATETIME(3)             NOT NULL,
 
     PRIMARY KEY (`gid`),
-    UNIQUE KEY (`transaction_id`)
+    UNIQUE KEY (`transaction_id`),
+    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)
 );
 
 -- +down
