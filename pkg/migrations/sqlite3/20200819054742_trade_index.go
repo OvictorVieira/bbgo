@@ -14,17 +14,17 @@ func init() {
 func upTradeIndex(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 	// This code is executed when the migration is applied.
 
-	_, err = tx.ExecContext(ctx, "CREATE INDEX IF NOT EXISTS trades_symbol ON trades (user_exchanges_id, symbol);")
+	_, err = tx.ExecContext(ctx, "CREATE INDEX trades_symbol ON trades (user_exchanges_id, symbol);")
 	if err != nil {
 		return err
 	}
 
-	_, err = tx.ExecContext(ctx, "CREATE INDEX IF NOT EXISTS trades_symbol_fee_currency ON trades (user_exchanges_id, symbol, fee_currency, traded_at);")
+	_, err = tx.ExecContext(ctx, "CREATE INDEX trades_symbol_fee_currency ON trades (user_exchanges_id, symbol, fee_currency, traded_at);")
 	if err != nil {
 		return err
 	}
 
-	_, err = tx.ExecContext(ctx, "CREATE INDEX IF NOT EXISTS trades_traded_at_symbol ON trades (user_exchanges_id, traded_at, symbol);")
+	_, err = tx.ExecContext(ctx, "CREATE INDEX trades_traded_at_symbol ON trades (user_exchanges_id, traded_at, symbol);")
 	if err != nil {
 		return err
 	}
@@ -35,17 +35,17 @@ func upTradeIndex(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 func downTradeIndex(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 	// This code is executed when the migration is rolled back.
 
-	_, err = tx.ExecContext(ctx, "DROP INDEX IF EXISTS trades_symbol ON trades;")
+	_, err = tx.ExecContext(ctx, "DROP INDEX trades_symbol ON trades;")
 	if err != nil {
 		return err
 	}
 
-	_, err = tx.ExecContext(ctx, "DROP INDEX IF EXISTS trades_symbol_fee_currency ON trades;")
+	_, err = tx.ExecContext(ctx, "DROP INDEX trades_symbol_fee_currency ON trades;")
 	if err != nil {
 		return err
 	}
 
-	_, err = tx.ExecContext(ctx, "DROP INDEX IF EXISTS trades_traded_at_symbol ON trades;")
+	_, err = tx.ExecContext(ctx, "DROP INDEX trades_traded_at_symbol ON trades;")
 	if err != nil {
 		return err
 	}
