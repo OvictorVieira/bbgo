@@ -52,7 +52,7 @@ type Profit struct {
 	FeeInUSD    fixedpoint.Value `json:"feeInUSD" db:"fee_in_usd"`
 	Fee         fixedpoint.Value `json:"fee" db:"fee"`
 	FeeCurrency string           `json:"feeCurrency" db:"fee_currency"`
-	Exchange    ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange    ExchangeId       `json:"exchange" db:"exchange"`
 	IsMargin    bool             `json:"isMargin" db:"is_margin"`
 	IsFutures   bool             `json:"isFutures" db:"is_futures"`
 	IsIsolated  bool             `json:"isIsolated" db:"is_isolated"`

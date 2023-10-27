@@ -53,7 +53,7 @@ var ErrZeroQuantity = errors.New("order quantity can not be zero")
 var ErrEmptyOrderType = errors.New("order type can not be empty string")
 
 type Exchange struct {
-	sourceName     types.ExchangeName
+	sourceName     types.ExchangeId
 	publicExchange types.Exchange
 	srv            *service.BacktestService
 	currentTime    time.Time
@@ -78,7 +78,7 @@ type Exchange struct {
 }
 
 func NewExchange(
-	sourceName types.ExchangeName, sourceExchange types.Exchange, srv *service.BacktestService, config *bbgo.Backtest,
+	sourceName types.ExchangeId, sourceExchange types.Exchange, srv *service.BacktestService, config *bbgo.Backtest,
 ) (*Exchange, error) {
 	ex := sourceExchange
 
@@ -297,7 +297,7 @@ func (e *Exchange) QueryTickers(ctx context.Context, symbol ...string) (map[stri
 	return nil, ErrUnimplemented
 }
 
-func (e *Exchange) Name() types.ExchangeName {
+func (e *Exchange) Name() types.ExchangeId {
 	return e.publicExchange.Name()
 }
 

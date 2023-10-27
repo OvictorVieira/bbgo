@@ -114,7 +114,7 @@ func (s *MarginService) Sync(ctx context.Context, ex types.Exchange, asset strin
 	return nil
 }
 
-func SelectLastMarginLoans(ex types.ExchangeName, asset string, limit uint64) sq.SelectBuilder {
+func SelectLastMarginLoans(ex types.ExchangeId, asset string, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("margin_loans").
 		Where(sq.Eq{"exchange": ex, "asset": asset}).
@@ -122,7 +122,7 @@ func SelectLastMarginLoans(ex types.ExchangeName, asset string, limit uint64) sq
 		Limit(limit)
 }
 
-func SelectLastMarginRepays(ex types.ExchangeName, asset string, limit uint64) sq.SelectBuilder {
+func SelectLastMarginRepays(ex types.ExchangeId, asset string, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("margin_repays").
 		Where(sq.Eq{"exchange": ex, "asset": asset}).
@@ -130,7 +130,7 @@ func SelectLastMarginRepays(ex types.ExchangeName, asset string, limit uint64) s
 		Limit(limit)
 }
 
-func SelectLastMarginInterests(ex types.ExchangeName, asset string, limit uint64) sq.SelectBuilder {
+func SelectLastMarginInterests(ex types.ExchangeId, asset string, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("margin_interests").
 		Where(sq.Eq{"exchange": ex, "asset": asset}).
@@ -138,7 +138,7 @@ func SelectLastMarginInterests(ex types.ExchangeName, asset string, limit uint64
 		Limit(limit)
 }
 
-func SelectLastMarginLiquidations(ex types.ExchangeName, limit uint64) sq.SelectBuilder {
+func SelectLastMarginLiquidations(ex types.ExchangeId, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("margin_liquidations").
 		Where(sq.Eq{"exchange": ex}).

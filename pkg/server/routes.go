@@ -122,7 +122,7 @@ func (s *Server) newEngine(ctx context.Context) *gin.Engine {
 		}
 
 		trades, err := s.Environ.TradeService.Query(service.QueryTradesOptions{
-			Exchange: types.ExchangeName(exchange),
+			Exchange: types.ExchangeId(exchange),
 			Symbol:   symbol,
 			LastGID:  lastGID,
 			Ordering: "DESC",
@@ -297,7 +297,7 @@ func (s *Server) listClosedOrders(c *gin.Context) {
 	}
 
 	orders, err := s.Environ.OrderService.Query(service.QueryOrdersOptions{
-		Exchange: types.ExchangeName(exchange),
+		Exchange: types.ExchangeId(exchange),
 		Symbol:   symbol,
 		LastGID:  lastGID,
 		Ordering: "DESC",

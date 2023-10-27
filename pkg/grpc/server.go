@@ -271,7 +271,7 @@ func (s *MarketDataService) Subscribe(request *pb.SubscribeRequest, server pb.Ma
 }
 
 func (s *MarketDataService) QueryKLines(ctx context.Context, request *pb.QueryKLinesRequest) (*pb.QueryKLinesResponse, error) {
-	exchangeName, err := types.ValidExchangeName(request.Exchange)
+	exchangeName, err := types.ValidExchangeId(request.Exchange)
 	if err != nil {
 		return nil, err
 	}

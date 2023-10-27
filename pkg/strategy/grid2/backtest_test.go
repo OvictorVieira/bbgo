@@ -76,7 +76,7 @@ func RunBacktest(t *testing.T, strategy bbgo.SingleExchangeStrategy) {
 	bbgo.SetBackTesting(backtestService)
 	defer bbgo.SetBackTesting(nil)
 
-	exName, err := types.ValidExchangeName(backtestExchangeName)
+	exName, err := types.ValidExchangeId(backtestExchangeName)
 	if !assert.NoError(t, err) {
 		return
 	}

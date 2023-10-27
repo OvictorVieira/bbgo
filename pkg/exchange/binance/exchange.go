@@ -165,7 +165,7 @@ func (e *Exchange) setServerTimeOffset(ctx context.Context) {
 	}
 }
 
-func (e *Exchange) Name() types.ExchangeName {
+func (e *Exchange) Name() types.ExchangeId {
 	return types.ExchangeBinance
 }
 

@@ -9,7 +9,7 @@ import (
 
 type Withdraw struct {
 	GID        int64            `json:"gid" db:"gid"`
-	Exchange   ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange   ExchangeId       `json:"exchange" db:"exchange"`
 	Asset      string           `json:"asset" db:"asset"`
 	Amount     fixedpoint.Value `json:"amount" db:"amount"`
 	Address    string           `json:"address" db:"address"`

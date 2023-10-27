@@ -48,8 +48,8 @@ type KLineQueryOptions struct {
 
 // KLine uses binance's kline as the standard structure
 type KLine struct {
-	GID      uint64       `json:"gid" db:"gid"`
-	Exchange ExchangeName `json:"exchange" db:"exchange"`
+	GID      uint64     `json:"gid" db:"gid"`
+	Exchange ExchangeId `json:"exchange" db:"exchange"`
 
 	Symbol string `json:"symbol" db:"symbol"`
 

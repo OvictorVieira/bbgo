@@ -28,7 +28,7 @@ const (
 
 type Deposit struct {
 	GID           int64            `json:"gid" db:"gid"`
-	Exchange      ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange      ExchangeId       `json:"exchange" db:"exchange"`
 	Time          Time             `json:"time" db:"time"`
 	Amount        fixedpoint.Value `json:"amount" db:"amount"`
 	Asset         string           `json:"asset" db:"asset"`

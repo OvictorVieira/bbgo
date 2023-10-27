@@ -180,9 +180,9 @@ var BacktestCmd = &cobra.Command{
 			}
 		}
 
-		var sourceExchanges = make(map[types.ExchangeName]types.Exchange)
+		var sourceExchanges = make(map[types.ExchangeId]types.Exchange)
 		for _, name := range userConfig.Backtest.Sessions {
-			exName, err := types.ValidExchangeName(name)
+			exName, err := types.ValidExchangeId(name)
 			if err != nil {
 				return err
 			}
@@ -666,7 +666,7 @@ func createSymbolReport(userConfig *bbgo.Config, session *bbgo.ExchangeSession, 
 	return &symbolReport, nil
 }
 
-func verify(userConfig *bbgo.Config, backtestService *service.BacktestService, sourceExchanges map[types.ExchangeName]types.Exchange, startTime, endTime time.Time) error {
+func verify(userConfig *bbgo.Config, backtestService *service.BacktestService, sourceExchanges map[types.ExchangeId]types.Exchange, startTime, endTime time.Time) error {
 	for _, sourceExchange := range sourceExchanges {
 		err := backtestService.Verify(sourceExchange, userConfig.Backtest.Symbols, startTime, endTime)
 		if err != nil {
@@ -706,7 +706,7 @@ func getExchangeIntervals(ex types.Exchange) types.IntervalMap {
 	return types.SupportedIntervals
 }
 
-func sync(ctx context.Context, userConfig *bbgo.Config, backtestService *service.BacktestService, sourceExchanges map[types.ExchangeName]types.Exchange, syncFrom, syncTo time.Time) error {
+func sync(ctx context.Context, userConfig *bbgo.Config, backtestService *service.BacktestService, sourceExchanges map[types.ExchangeId]types.Exchange, syncFrom, syncTo time.Time) error {
 	for _, symbol := range userConfig.Backtest.Symbols {
 		for _, sourceExchange := range sourceExchanges {
 			var supportIntervals = getExchangeIntervals(sourceExchange)

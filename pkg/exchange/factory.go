@@ -14,7 +14,7 @@ import (
 	"github.com/OvictorVieira/bbgo/pkg/types"
 )
 
-func NewPublic(exchangeName types.ExchangeName) (types.Exchange, error) {
+func NewPublic(exchangeName types.ExchangeId) (types.Exchange, error) {
 	exMinimal, err := New(exchangeName, "", "", "")
 	if err != nil {
 		return nil, err
@@ -27,7 +27,7 @@ func NewPublic(exchangeName types.ExchangeName) (types.Exchange, error) {
 	return nil, fmt.Errorf("exchange %T does not implement types.Exchange", exMinimal)
 }
 
-func New(n types.ExchangeName, key, secret, passphrase string) (types.ExchangeMinimal, error) {
+func New(n types.ExchangeId, key, secret, passphrase string) (types.ExchangeMinimal, error) {
 	switch n {
 
 	case types.ExchangeBinance:
@@ -56,7 +56,7 @@ func New(n types.ExchangeName, key, secret, passphrase string) (types.ExchangeMi
 
 // NewWithEnvVarPrefix allocate and initialize the exchange instance with the given environment variable prefix
 // When the varPrefix is a empty string, the default exchange name will be used as the prefix
-func NewWithEnvVarPrefix(n types.ExchangeName, varPrefix string) (types.ExchangeMinimal, error) {
+func NewWithEnvVarPrefix(n types.ExchangeId, varPrefix string) (types.ExchangeMinimal, error) {
 	if len(varPrefix) == 0 {
 		varPrefix = n.String()
 	}

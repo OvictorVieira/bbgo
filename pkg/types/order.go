@@ -251,7 +251,7 @@ type OrderQuery struct {
 type Order struct {
 	SubmitOrder
 
-	Exchange ExchangeName `json:"exchange" db:"exchange"`
+	Exchange ExchangeId `json:"exchange" db:"exchange"`
 
 	// GID is used for relational database storage, it's an incremental ID
 	GID     uint64 `json:"gid,omitempty" db:"gid"`

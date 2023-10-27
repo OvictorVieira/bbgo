@@ -1,6 +1,6 @@
 package types
 
-func ExchangeFooterIcon(exName ExchangeName) string {
+func ExchangeFooterIcon(exName ExchangeId) string {
 	footerIcon := ""
 
 	switch exName {

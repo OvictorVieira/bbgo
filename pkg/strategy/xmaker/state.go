@@ -23,7 +23,7 @@ type ProfitStats struct {
 
 	lock sync.Mutex
 
-	MakerExchange types.ExchangeName `json:"makerExchange"`
+	MakerExchange types.ExchangeId `json:"makerExchange"`
 
 	AccumulatedMakerVolume    fixedpoint.Value `json:"accumulatedMakerVolume,omitempty"`
 	AccumulatedMakerBidVolume fixedpoint.Value `json:"accumulatedMakerBidVolume,omitempty"`

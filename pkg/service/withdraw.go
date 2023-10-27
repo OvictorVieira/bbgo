@@ -71,7 +71,7 @@ func (s *WithdrawService) Sync(ctx context.Context, ex types.Exchange, startTime
 	return nil
 }
 
-func SelectLastWithdraws(ex types.ExchangeName, limit uint64) sq.SelectBuilder {
+func SelectLastWithdraws(ex types.ExchangeId, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("withdraws").
 		Where(sq.And{
@@ -81,7 +81,7 @@ func SelectLastWithdraws(ex types.ExchangeName, limit uint64) sq.SelectBuilder {
 		Limit(limit)
 }
 
-func (s *WithdrawService) QueryLast(ex types.ExchangeName, limit int) ([]types.Withdraw, error) {
+func (s *WithdrawService) QueryLast(ex types.ExchangeId, limit int) ([]types.Withdraw, error) {
 	sql := "SELECT * FROM `withdraws` WHERE `exchange` = :exchange ORDER BY `time` DESC LIMIT :limit"
 	rows, err := s.DB.NamedQuery(sql, map[string]interface{}{
 		"exchange": ex,
@@ -95,7 +95,7 @@ func (s *WithdrawService) QueryLast(ex types.ExchangeName, limit int) ([]types.W
 	return s.scanRows(rows)
 }
 
-func (s *WithdrawService) Query(exchangeName types.ExchangeName) ([]types.Withdraw, error) {
+func (s *WithdrawService) Query(exchangeName types.ExchangeId) ([]types.Withdraw, error) {
 	args := map[string]interface{}{
 		"exchange": exchangeName,
 	}
