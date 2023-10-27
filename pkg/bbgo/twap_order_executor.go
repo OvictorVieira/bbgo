@@ -10,9 +10,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/time/rate"
 
-	"github.com/OvictorVieira/bbgo/pkg/core"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/core"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type TwapExecution struct {

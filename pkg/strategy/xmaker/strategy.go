@@ -10,12 +10,12 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/time/rate"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/core"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/indicator"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/core"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/indicator"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 var defaultMargin = fixedpoint.NewFromFloat(0.003)

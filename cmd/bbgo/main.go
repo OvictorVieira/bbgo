@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/cmd"
+	"github.com/OvictorVieira/promeheux.api/pkg/cmd"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi"
 	"net/url"
 	"reflect"
 	"regexp"

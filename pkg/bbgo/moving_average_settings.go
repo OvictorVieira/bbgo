@@ -3,7 +3,7 @@ package bbgo
 import (
 	"fmt"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type MovingAverageSettings struct {

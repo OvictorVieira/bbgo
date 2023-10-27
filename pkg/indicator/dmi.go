@@ -3,7 +3,7 @@ package indicator
 import (
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Refer: https://www.investopedia.com/terms/d/dmi.asp

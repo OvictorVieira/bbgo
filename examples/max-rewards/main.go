@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	maxapi "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
+	maxapi "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
 )
 
 func main() {

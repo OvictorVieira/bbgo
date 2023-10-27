@@ -12,7 +12,7 @@ import (
 	"golang.org/x/time/rate"
 	"gopkg.in/tucnak/telebot.v2"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var apiLimiter = rate.NewLimiter(rate.Every(50*time.Millisecond), 20)

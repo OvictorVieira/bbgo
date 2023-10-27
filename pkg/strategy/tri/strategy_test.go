@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 var markets = make(types.MarketMap)

@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/OvictorVieira/bbgo/pkg/dynamic"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/interact"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/dynamic"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/interact"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type PositionCloser interface {

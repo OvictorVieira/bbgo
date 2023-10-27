@@ -3,7 +3,7 @@ package tri
 import (
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func fitQuantityByBase(quantity, balance float64) (float64, float64) {

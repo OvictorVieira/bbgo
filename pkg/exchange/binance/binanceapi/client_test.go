@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/testutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/testutil"
 )
 
 func getTestClientOrSkip(t *testing.T) *RestClient {

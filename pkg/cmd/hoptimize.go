@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/optimizer"
+	"github.com/OvictorVieira/promeheux.api/pkg/optimizer"
 	"github.com/fatih/color"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

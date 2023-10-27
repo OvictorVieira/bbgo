@@ -8,10 +8,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/retry"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/retry"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (s *Strategy) recoverByScanningTrades(ctx context.Context, session *bbgo.ExchangeSession) error {

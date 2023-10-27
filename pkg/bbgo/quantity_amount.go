@@ -3,7 +3,7 @@ package bbgo
 import (
 	"errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 // QuantityOrAmount is a setting structure used for quantity/amount settings

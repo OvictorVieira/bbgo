@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 var s func(string) fixedpoint.Value = fixedpoint.MustNewFromString

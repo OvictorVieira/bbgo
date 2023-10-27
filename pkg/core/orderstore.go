@@ -3,7 +3,7 @@ package core
 import (
 	"sync"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type OrderStore struct {

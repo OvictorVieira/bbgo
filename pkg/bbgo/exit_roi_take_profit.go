@@ -3,8 +3,8 @@ package bbgo
 import (
 	"context"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // RoiTakeProfit force takes the profit by the given ROI percentage.

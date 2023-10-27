@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/sigchan"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/sigchan"
 )
 
 type OrderBook interface {

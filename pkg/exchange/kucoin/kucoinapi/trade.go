@@ -11,8 +11,8 @@ import (
 	"github.com/c9s/requestgen"
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type TradeService struct {

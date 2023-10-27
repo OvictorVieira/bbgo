@@ -3,8 +3,8 @@ package indicator
 import (
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Refer: https://tradingview.com/script/aDymGrFx-Drift-Study-Inspired-by-Monte-Carlo-Simulations-with-BM-KL/

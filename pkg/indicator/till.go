@@ -1,7 +1,7 @@
 package indicator
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 const defaultVolumeFactor = 0.7

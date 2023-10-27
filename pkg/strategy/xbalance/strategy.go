@@ -11,11 +11,11 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/slack-go/slack"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
-	"github.com/OvictorVieira/bbgo/pkg/util/templateutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/util/templateutil"
 )
 
 const ID = "xbalance"

@@ -12,9 +12,9 @@ import (
 	"go.uber.org/multierr"
 	"golang.org/x/time/rate"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/okex/okexapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/okex/okexapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Okex rate limit list in each api document

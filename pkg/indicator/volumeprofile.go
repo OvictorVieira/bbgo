@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type trade struct {

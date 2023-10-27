@@ -9,8 +9,8 @@ import (
 	"github.com/adshao/go-binance/v2/futures"
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func toGlobalMarket(symbol binance.Symbol) types.Market {

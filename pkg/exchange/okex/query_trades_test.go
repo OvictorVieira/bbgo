@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/testutil"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/testutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"github.com/stretchr/testify/assert"
 )
 

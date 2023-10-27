@@ -1,7 +1,7 @@
 package types
 
 import "testing"
-import "github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+import "github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 
 func Test_trimTrailingZero(t *testing.T) {
 	type args struct {

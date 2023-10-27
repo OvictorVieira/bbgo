@@ -3,7 +3,7 @@
 package depth
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (b *Buffer) OnReset(cb func()) {

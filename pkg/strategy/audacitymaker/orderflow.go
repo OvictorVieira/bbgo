@@ -2,10 +2,10 @@ package audacitymaker
 
 import (
 	"context"
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 
 	"gonum.org/v1/gonum/stat"
 )

@@ -7,11 +7,11 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/depth"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/kucoin/kucoinapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/depth"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/kucoin/kucoinapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 const readTimeout = 30 * time.Second

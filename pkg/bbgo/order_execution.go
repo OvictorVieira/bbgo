@@ -10,10 +10,10 @@ import (
 	log "github.com/sirupsen/logrus"
 	"go.uber.org/multierr"
 
-	"github.com/OvictorVieira/bbgo/pkg/core"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/core"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 var DefaultSubmitOrderRetryTimeout = 5 * time.Minute

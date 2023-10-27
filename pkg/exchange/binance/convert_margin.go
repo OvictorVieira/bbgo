@@ -3,9 +3,9 @@ package binance
 import (
 	"github.com/adshao/go-binance/v2"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance/binanceapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance/binanceapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func toGlobalLoan(record binanceapi.MarginLoanRecord) types.MarginLoan {

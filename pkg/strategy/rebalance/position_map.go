@@ -1,7 +1,7 @@
 package rebalance
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type PositionMap map[string]*types.Position

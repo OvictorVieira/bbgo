@@ -1,6 +1,6 @@
 package types
 
-import "github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+import "github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 
 // Color is the RB Tree color
 type Color bool

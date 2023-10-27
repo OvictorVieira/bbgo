@@ -38,11 +38,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/cache"
+	"github.com/OvictorVieira/promeheux.api/pkg/cache"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/service"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/service"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var log = logrus.WithField("cmd", "backtest")

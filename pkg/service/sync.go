@@ -5,11 +5,11 @@ import (
 	"errors"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/cache"
+	"github.com/OvictorVieira/promeheux.api/pkg/cache"
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var ErrNotImplemented = errors.New("not implemented")

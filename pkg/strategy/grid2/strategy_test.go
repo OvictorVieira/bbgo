@@ -11,11 +11,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/core"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	gridmocks "github.com/OvictorVieira/bbgo/pkg/strategy/grid2/mocks"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/types/mocks"
+	"github.com/OvictorVieira/promeheux.api/pkg/core"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	gridmocks "github.com/OvictorVieira/promeheux.api/pkg/strategy/grid2/mocks"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types/mocks"
 )
 
 func init() {

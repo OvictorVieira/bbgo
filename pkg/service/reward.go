@@ -10,10 +10,10 @@ import (
 	sq "github.com/Masterminds/squirrel"
 	"github.com/jmoiron/sqlx"
 
-	exchange2 "github.com/OvictorVieira/bbgo/pkg/exchange"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/batch"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	exchange2 "github.com/OvictorVieira/promeheux.api/pkg/exchange"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/batch"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // RewardService collects the reward records from the exchange,

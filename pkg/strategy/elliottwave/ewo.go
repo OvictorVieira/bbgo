@@ -1,6 +1,6 @@
 package elliottwave
 
-import "github.com/OvictorVieira/bbgo/pkg/indicator"
+import "github.com/OvictorVieira/promeheux.api/pkg/indicator"
 
 type ElliottWave struct {
 	maSlow  *indicator.SMA

@@ -1,6 +1,6 @@
 package bybitapi
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 var (
 	SupportedIntervals = map[types.Interval]int{

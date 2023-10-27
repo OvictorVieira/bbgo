@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var closedErrChan = make(chan error)

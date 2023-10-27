@@ -3,7 +3,7 @@
 package bbgo
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (store *MarketDataStore) OnKLineWindowUpdate(cb func(interval types.Interval, klines types.KLineWindow)) {

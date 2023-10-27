@@ -1,6 +1,6 @@
 package indicatorv2
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 type EWMAStream struct {
 	*types.Float64Series

@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
 )
 
 type Float64Series struct {

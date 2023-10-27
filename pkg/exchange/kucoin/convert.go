@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/kucoin/kucoinapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/kucoin/kucoinapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func toGlobalBalanceMap(accounts []kucoinapi.Account) types.BalanceMap {

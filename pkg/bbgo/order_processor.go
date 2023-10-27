@@ -3,7 +3,7 @@ package bbgo
 import (
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 var (

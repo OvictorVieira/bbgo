@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 var itov func(int64) fixedpoint.Value = fixedpoint.NewFromInt

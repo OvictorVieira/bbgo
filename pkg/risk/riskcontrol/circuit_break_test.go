@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	indicatorv2 "github.com/OvictorVieira/bbgo/pkg/indicator/v2"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	indicatorv2 "github.com/OvictorVieira/promeheux.api/pkg/indicator/v2"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func Test_IsHalted(t *testing.T) {

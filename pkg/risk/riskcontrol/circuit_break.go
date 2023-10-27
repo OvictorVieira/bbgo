@@ -5,9 +5,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	indicatorv2 "github.com/OvictorVieira/bbgo/pkg/indicator/v2"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	indicatorv2 "github.com/OvictorVieira/promeheux.api/pkg/indicator/v2"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type CircuitBreakRiskControl struct {

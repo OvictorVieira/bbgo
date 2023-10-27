@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance/binanceapi"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance/binanceapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (e *Exchange) QueryRewards(ctx context.Context, startTime time.Time) ([]types.Reward, error) {

@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Parabolic SAR(Stop and Reverse) / SAR

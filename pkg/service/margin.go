@@ -8,8 +8,8 @@ import (
 	sq "github.com/Masterminds/squirrel"
 	"github.com/jmoiron/sqlx"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/batch"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/batch"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type MarginService struct {

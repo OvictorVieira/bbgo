@@ -3,22 +3,22 @@ package linregmaker
 import (
 	"context"
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/report"
+	"github.com/OvictorVieira/promeheux.api/pkg/report"
 	"os"
 	"strconv"
 	"sync"
 
-	"github.com/OvictorVieira/bbgo/pkg/risk/dynamicrisk"
+	"github.com/OvictorVieira/promeheux.api/pkg/risk/dynamicrisk"
 
-	"github.com/OvictorVieira/bbgo/pkg/indicator"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/indicator"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // TODO: Docs

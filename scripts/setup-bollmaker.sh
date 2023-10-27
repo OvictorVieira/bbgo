@@ -33,7 +33,7 @@ esac
 dist_file=bbgo-$version-$osf-$arch.tar.gz
 
 info "downloading..."
-curl -O -L https://github.com/OvictorVieira/bbgo/releases/download/$version/$dist_file
+curl -O -L https://github.com/OvictorVieira/promeheux.api/releases/download/$version/$dist_file
 tar xzf $dist_file
 mv bbgo-$osf-$arch bbgo
 chmod +x bbgo

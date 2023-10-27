@@ -1,7 +1,7 @@
 package bbgo
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 //go:generate callbackgen -type StrategyController -interface

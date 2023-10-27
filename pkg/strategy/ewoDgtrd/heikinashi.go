@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type HeikinAshi struct {

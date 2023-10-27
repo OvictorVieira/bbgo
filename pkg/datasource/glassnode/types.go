@@ -3,7 +3,7 @@ package glassnode
 import (
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datasource/glassnode/glassnodeapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/datasource/glassnode/glassnodeapi"
 )
 
 type QueryOptions struct {

@@ -2,8 +2,8 @@ package optimizer
 
 import (
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/data/tsv"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/data/tsv"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 	"io"
 	"strconv"
 )

@@ -3,7 +3,7 @@
 package indicatorv2
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (s *KLineStream) OnUpdate(cb func(k types.KLine)) {

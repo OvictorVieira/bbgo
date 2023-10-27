@@ -3,7 +3,7 @@ package bollmaker
 import (
 	"testing"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 func Test_calculateBandPercentage(t *testing.T) {

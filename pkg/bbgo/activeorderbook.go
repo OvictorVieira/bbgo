@@ -10,9 +10,9 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/core"
-	"github.com/OvictorVieira/bbgo/pkg/sigchan"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/core"
+	"github.com/OvictorVieira/promeheux.api/pkg/sigchan"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 const CancelOrderWaitTime = 20 * time.Millisecond

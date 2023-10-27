@@ -1,8 +1,8 @@
 package indicatorv2
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/indicator"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/indicator"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type CMAStream struct {

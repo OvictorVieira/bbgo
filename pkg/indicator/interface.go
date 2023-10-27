@@ -1,6 +1,6 @@
 package indicator
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 type KLineWindowUpdater interface {
 	OnKLineWindowUpdate(func(interval types.Interval, window types.KLineWindow))

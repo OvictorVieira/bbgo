@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/kucoin"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/kucoin/kucoinapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/kucoin"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/kucoin/kucoinapi"
 	"github.com/gorilla/websocket"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

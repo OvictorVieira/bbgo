@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	max "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
-	v3 "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi/v3"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	max "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
+	v3 "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi/v3"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func toGlobalCurrency(currency string) string {

@@ -3,9 +3,9 @@ package factorzoo
 import (
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/indicator"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/indicator"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // simply internal return rate over certain timeframe(interval)

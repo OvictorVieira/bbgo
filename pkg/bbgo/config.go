@@ -12,11 +12,11 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v3"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype"
-	"github.com/OvictorVieira/bbgo/pkg/dynamic"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/service"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype"
+	"github.com/OvictorVieira/promeheux.api/pkg/dynamic"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/service"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // DefaultFeeRate set the fee rate for most cases

@@ -7,8 +7,8 @@ import (
 
 	"github.com/slack-go/slack"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/util/templateutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/util/templateutil"
 )
 
 type PositionType string

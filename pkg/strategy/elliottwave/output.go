@@ -5,10 +5,10 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/dynamic"
-	"github.com/OvictorVieira/bbgo/pkg/interact"
-	"github.com/OvictorVieira/bbgo/pkg/style"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/dynamic"
+	"github.com/OvictorVieira/promeheux.api/pkg/interact"
+	"github.com/OvictorVieira/promeheux.api/pkg/style"
 	"github.com/jedib0t/go-pretty/v6/table"
 )
 

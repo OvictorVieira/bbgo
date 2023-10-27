@@ -9,7 +9,7 @@ import (
 	"github.com/wcharczuk/go-chart/v2"
 	"gonum.org/v1/gonum/stat"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
 )
 
 // Float64Indicator is the indicators (SMA and EWMA) that we want to use are returning float64 data.

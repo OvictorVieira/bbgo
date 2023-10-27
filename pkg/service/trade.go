@@ -11,9 +11,9 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	exchange2 "github.com/OvictorVieira/bbgo/pkg/exchange"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/batch"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	exchange2 "github.com/OvictorVieira/promeheux.api/pkg/exchange"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/batch"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var ErrTradeNotFound = errors.New("trade not found")

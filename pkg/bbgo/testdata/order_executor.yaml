@@ -1,6 +1,6 @@
 ---
 imports:
-- github.com/OvictorVieira/bbgo/pkg/strategy/buyandhold
+- github.com/OvictorVieira/promeheux.api/pkg/strategy/buyandhold
 
 sessions:
   max:

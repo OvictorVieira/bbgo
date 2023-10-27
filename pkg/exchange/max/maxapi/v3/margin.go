@@ -7,8 +7,8 @@ package v3
 import (
 	"github.com/c9s/requestgen"
 
-	maxapi "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	maxapi "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 type MarginService struct {

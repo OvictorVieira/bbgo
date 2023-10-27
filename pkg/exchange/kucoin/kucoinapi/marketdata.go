@@ -14,8 +14,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/valyala/fastjson"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type MarketDataService struct {

@@ -23,9 +23,9 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/util"
-	"github.com/OvictorVieira/bbgo/pkg/util/backoff"
-	"github.com/OvictorVieira/bbgo/pkg/version"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/util/backoff"
+	"github.com/OvictorVieira/promeheux.api/pkg/version"
 )
 
 const (

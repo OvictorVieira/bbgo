@@ -6,13 +6,13 @@ import (
 	"os"
 	"sync"
 
-	"github.com/OvictorVieira/bbgo/pkg/dynamic"
+	"github.com/OvictorVieira/promeheux.api/pkg/dynamic"
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 const ID = "trendtrader"

@@ -3,7 +3,7 @@
 package indicator
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (inc *UtBotAlert) OnUpdate(cb func(value types.Direction)) {

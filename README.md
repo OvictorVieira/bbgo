@@ -4,9 +4,9 @@ A modern crypto trading bot framework written in Go.
 
 ## Current Status
 
-[![Go](https://github.com/OvictorVieira/bbgo/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/OvictorVieira/bbgo/actions/workflows/go.yml)
-[![GoDoc](https://godoc.org/github.com/OvictorVieira/bbgo?status.svg)](https://pkg.go.dev/github.com/OvictorVieira/bbgo)
-[![Go Report Card](https://goreportcard.com/badge/github.com/OvictorVieira/bbgo)](https://goreportcard.com/report/github.com/OvictorVieira/bbgo)
+[![Go](https://github.com/OvictorVieira/promeheux.api/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/OvictorVieira/promeheux.api/actions/workflows/go.yml)
+[![GoDoc](https://godoc.org/github.com/OvictorVieira/promeheux.api?status.svg)](https://pkg.go.dev/github.com/OvictorVieira/promeheux.api)
+[![Go Report Card](https://goreportcard.com/badge/github.com/OvictorVieira/promeheux.api)](https://goreportcard.com/report/github.com/OvictorVieira/promeheux.api)
 [![DockerHub](https://img.shields.io/docker/pulls/yoanlin/bbgo.svg)](https://hub.docker.com/r/yoanlin/bbgo)
 [![Coverage Status](http://codecov.io/github/c9s/bbgo/coverage.svg?branch=main)](http://codecov.io/github/c9s/bbgo?branch=main)
 <img alt="open collective badge" src="https://opencollective.com/bbgo/tiers/badge.svg">
@@ -46,7 +46,7 @@ the implementation.
 - Built-in Grid strategy and many other built-in strategies.
 - Multi-exchange session support: you can connect to more than 2 exchanges with different accounts or subaccounts.
 - Indicators with interface similar
-  to `pandas.Series`([series](https://github.com/OvictorVieira/bbgo/blob/main/doc/development/series.md))([usage](https://github.com/OvictorVieira/bbgo/blob/main/doc/development/indicator.md)):
+  to `pandas.Series`([series](https://github.com/OvictorVieira/promeheux.api/blob/main/doc/development/series.md))([usage](https://github.com/OvictorVieira/promeheux.api/blob/main/doc/development/indicator.md)):
     - [Accumulation/Distribution Indicator](./pkg/indicator/ad.go)
     - [Arnaud Legoux Moving Average](./pkg/indicator/alma.go)
     - [Average True Range](./pkg/indicator/atr.go)
@@ -77,7 +77,7 @@ the implementation.
     - [Volume Weighted Average Price](./pkg/indicator/vwap.go)
     - [Zero Lag Exponential Moving Average](./pkg/indicator/zlema.go)
     - And more...
-- HeikinAshi OHLC / Normal OHLC (check [this config](https://github.com/OvictorVieira/bbgo/blob/main/config/skeleton.yaml#L5))
+- HeikinAshi OHLC / Normal OHLC (check [this config](https://github.com/OvictorVieira/promeheux.api/blob/main/config/skeleton.yaml#L5))
 - React-powered Web Dashboard.
 - Docker image ready.
 - Kubernetes support.
@@ -175,7 +175,7 @@ If you already have configuration somewhere, a download-only script might be sui
 bash <(curl -s https://raw.githubusercontent.com/c9s/bbgo/main/scripts/download.sh)
 ```
 
-Or refer to the [Release Page](https://github.com/OvictorVieira/bbgo/releases) and download manually.
+Or refer to the [Release Page](https://github.com/OvictorVieira/promeheux.api/releases) and download manually.
 
 Since v2, we've added new float point implementation from dnum to support decimals with higher precision. To download &
 setup, please refer to [Dnum Installation](doc/topics/dnum-binary.md)
@@ -205,8 +205,12 @@ Add your dotenv file:
 BINANCE_API_KEY=
 BINANCE_API_SECRET=
 
+# For Binance Testnet
+PAPER_TRADE=1
+DISABLE_MARKET_CACHE=1# the symbols supported in testnet is far less than the mainnet
+
 # if you want to use binance.us, change this to 1
-BINANCE_US=0
+BINANCE_US=1
 
 # for MAX exchange, if you have one
 MAX_API_KEY=
@@ -215,7 +219,7 @@ MAX_API_SECRET=
 # for OKEx exchange, if you have one
 OKEX_API_KEY=
 OKEX_API_SECRET=
-OKEX_API_PASSPHRASE
+OKEX_API_PASSPHRASE=
 
 # for kucoin exchange, if you have one
 KUCOIN_API_KEY=
@@ -226,6 +230,10 @@ KUCOIN_API_KEY_VERSION=2
 # for Bybit exchange, if you have one
 BYBIT_API_KEY=
 BYBIT_API_SECRET=
+
+# Database
+DB_DRIVER=
+DB_DSN=
 ```
 
 Prepare your dotenv file `.env.local` and BBGO yaml config file `bbgo.yaml`.
@@ -431,7 +439,7 @@ Create your go package, and initialize the repository with `go mod` and add bbgo
 
 ```sh
 go mod init
-go get github.com/OvictorVieira/bbgo@main
+go get github.com/OvictorVieira/promeheux.api@main
 ```
 
 Write your own strategy in the strategy file:
@@ -440,7 +448,7 @@ Write your own strategy in the strategy file:
 vim strategy.go
 ```
 
-You can grab the skeleton strategy from <https://github.com/OvictorVieira/bbgo/blob/main/pkg/strategy/skeleton/strategy.go>
+You can grab the skeleton strategy from <https://github.com/OvictorVieira/promeheux.api/blob/main/pkg/strategy/skeleton/strategy.go>
 
 Now add your config:
 
@@ -590,8 +598,8 @@ streambook.BindStream(stream)
 ### Setting up your local repository
 
 1. Click the "Fork" button from the GitHub repository.
-2. Clone your forked repository into `$GOPATH/github.com/OvictorVieira/bbgo`.
-3. Change directory into `$GOPATH/github.com/OvictorVieira/bbgo`.
+2. Clone your forked repository into `$GOPATH/github.com/OvictorVieira/promeheux.api`.
+3. Change directory into `$GOPATH/github.com/OvictorVieira/promeheux.api`.
 4. Create a branch and start your development.
 5. Test your changes.
 6. Push your changes to your fork.

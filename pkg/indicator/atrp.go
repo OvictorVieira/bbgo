@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // ATRP is the average true range percentage

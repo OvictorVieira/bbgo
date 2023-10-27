@@ -4,7 +4,7 @@ import (
 	"github.com/adshao/go-binance/v2"
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type CancelReplaceSpotOrderData struct {

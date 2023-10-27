@@ -45,7 +45,7 @@ CGO_ENABLED=1 go get github.com/mattn/go-sqlite3
 Install bbgo:
 
 ```sh
-go install -x github.com/OvictorVieira/bbgo/cmd/bbgo@main
+go install -x github.com/OvictorVieira/promeheux.api/cmd/bbgo@main
 ```
 
 Your binary will be installed into the default GOPATH `~/go/bin`.
@@ -74,12 +74,12 @@ Then your bbgo will be installed at `~/mygo/bin/bbgo`.
 
 ### Install via git clone
 
-Since the default GOPATH is located at `~/go`, you can clone the bbgo repo into the folder `~/go/src/github.com/OvictorVieira/bbgo`:
+Since the default GOPATH is located at `~/go`, you can clone the bbgo repo into the folder `~/go/src/github.com/OvictorVieira/promeheux.api`:
 
 ```shell
 mkdir -p ~/go/src/github.com/c9s
-git clone git@github.com:OvictorVieira/bbgo.git ~/go/src/github.com/OvictorVieira/bbgo
-cd ~/go/src/github.com/OvictorVieira/bbgo
+git clone git@github.com:OvictorVieira/bbgo.git ~/go/src/github.com/OvictorVieira/promeheux.api
+cd ~/go/src/github.com/OvictorVieira/promeheux.api
 ```
 
 Download the go modules:
@@ -121,7 +121,7 @@ Run the following command to install the dependencies:
 apk add git go gcc libc-dev sqlite
 export CGO_ENABLED=1
 go get github.com/mattn/go-sqlite3
-go install github.com/OvictorVieira/bbgo/cmd/bbgo@latest
+go install github.com/OvictorVieira/promeheux.api/cmd/bbgo@latest
 ```
 
 Your installed bbgo binary will be located in:

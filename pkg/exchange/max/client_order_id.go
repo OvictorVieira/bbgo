@@ -1,7 +1,7 @@
 package max
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"github.com/google/uuid"
 )
 

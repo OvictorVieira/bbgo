@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 const DateFormat = "2006-01-02"

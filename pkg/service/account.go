@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/multierr"
 	"time"

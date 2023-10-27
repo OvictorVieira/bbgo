@@ -2,14 +2,14 @@ package binance
 
 import (
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance/binanceapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance/binanceapi"
 	"time"
 
 	"github.com/adshao/go-binance/v2/futures"
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func toGlobalFuturesAccountInfo(account *binanceapi.FuturesAccount) *types.FuturesAccountInfo {

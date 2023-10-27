@@ -12,8 +12,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func TestBacktestService_FindMissingTimeRanges_EmptyData(t *testing.T) {

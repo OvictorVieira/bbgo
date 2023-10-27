@@ -3,8 +3,8 @@
 package riskcontrol
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (p *PositionRiskControl) OnReleasePosition(cb func(quantity fixedpoint.Value, side types.SideType)) {

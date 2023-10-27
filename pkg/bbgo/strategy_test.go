@@ -11,9 +11,9 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance"
-	"github.com/OvictorVieira/bbgo/pkg/service"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance"
+	"github.com/OvictorVieira/promeheux.api/pkg/service"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func TestTradeService(t *testing.T) {

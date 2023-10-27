@@ -5,7 +5,7 @@ import (
 
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 // 1 for internal transfer, 0 for external transfer

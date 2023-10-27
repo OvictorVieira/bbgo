@@ -14,10 +14,10 @@ import (
 	"go.uber.org/multierr"
 	"golang.org/x/time/rate"
 
-	maxapi "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
-	v3 "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi/v3"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	maxapi "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
+	v3 "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi/v3"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var log = logrus.WithField("exchange", "max")

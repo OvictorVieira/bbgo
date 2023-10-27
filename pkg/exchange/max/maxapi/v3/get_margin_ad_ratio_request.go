@@ -3,7 +3,7 @@ package v3
 import (
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 //go:generate -command GetRequest requestgen -method GET

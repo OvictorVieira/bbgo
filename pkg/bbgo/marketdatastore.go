@@ -1,6 +1,6 @@
 package bbgo
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 const MaxNumOfKLines = 5_000
 const MaxNumOfKLinesTruncate = 100

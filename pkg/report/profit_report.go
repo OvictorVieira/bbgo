@@ -2,11 +2,11 @@ package report
 
 import (
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/data/tsv"
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	indicatorv2 "github.com/OvictorVieira/bbgo/pkg/indicator/v2"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/data/tsv"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	indicatorv2 "github.com/OvictorVieira/promeheux.api/pkg/indicator/v2"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"strconv"
 )
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance/binanceapi"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance/binanceapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"github.com/adshao/go-binance/v2"
 )
 

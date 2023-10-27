@@ -1,8 +1,8 @@
 package risk
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // How to Calculate Cost Required to Open a Position in Perpetual Futures Contracts

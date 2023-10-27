@@ -7,8 +7,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/OvictorVieira/bbgo/pkg/dynamic"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/dynamic"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 var enableMarketTradeStop = true

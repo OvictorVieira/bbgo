@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/time/rate"
 	"gopkg.in/tucnak/telebot.v2"

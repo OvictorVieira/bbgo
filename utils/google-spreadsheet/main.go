@@ -13,9 +13,9 @@ import (
 	"google.golang.org/api/option"
 	"google.golang.org/api/sheets/v4"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	googleservice "github.com/OvictorVieira/bbgo/pkg/service/google"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	googleservice "github.com/OvictorVieira/promeheux.api/pkg/service/google"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Retrieve a token, saves the token, then returns the generated client.

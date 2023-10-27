@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
 )
 
 // SeriesBase is a wrapper of the Series interface

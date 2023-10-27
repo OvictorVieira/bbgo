@@ -12,11 +12,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/mocks"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/testutil"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/mocks"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/testutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func getTestClientOrSkip(t *testing.T) *Stream {

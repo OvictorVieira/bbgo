@@ -3,7 +3,7 @@ package indicatorv2
 import (
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // This TRStream calculates the ATR first

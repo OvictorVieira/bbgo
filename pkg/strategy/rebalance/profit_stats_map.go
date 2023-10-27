@@ -1,6 +1,6 @@
 package rebalance
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 type ProfitStatsMap map[string]*types.ProfitStats
 

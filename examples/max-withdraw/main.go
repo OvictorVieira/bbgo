@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	maxapi "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
+	maxapi "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
 	flag "github.com/spf13/pflag"
 )
 

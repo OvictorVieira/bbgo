@@ -1,7 +1,7 @@
 package optimizer
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 	"reflect"
 	"testing"
 )

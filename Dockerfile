@@ -2,12 +2,12 @@
 FROM golang:1.18.10-alpine3.17 AS builder
 RUN apk add --no-cache git ca-certificates gcc musl-dev libc-dev pkgconfig
 # gcc is for github.com/mattn/go-sqlite3
-# ADD . $GOPATH/src/github.com/OvictorVieira/bbgo
+# ADD . $GOPATH/src/github.com/OvictorVieira/promeheux.api
 
 
-WORKDIR $GOPATH/src/github.com/OvictorVieira/bbgo
+WORKDIR $GOPATH/src/github.com/OvictorVieira/promeheux.api
 ARG GO_MOD_CACHE
-ENV WORKDIR=$GOPATH/src/github.com/OvictorVieira/bbgo
+ENV WORKDIR=$GOPATH/src/github.com/OvictorVieira/promeheux.api
 ENV GOPATH_ORIG=$GOPATH
 ENV GOPATH=${GO_MOD_CACHE:+$WORKDIR/$GO_MOD_CACHE}
 ENV GOPATH=${GOPATH:-$GOPATH_ORIG}

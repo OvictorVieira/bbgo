@@ -11,8 +11,8 @@ import (
 
 	"github.com/google/uuid"
 
-	max "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	max "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 //go:generate callbackgen -type Stream

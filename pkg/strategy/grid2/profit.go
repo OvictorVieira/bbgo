@@ -7,9 +7,9 @@ import (
 
 	"github.com/slack-go/slack"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/style"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/style"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type GridProfit struct {

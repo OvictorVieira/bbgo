@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/okex/okexapi"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/okex/okexapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type WebsocketOp struct {

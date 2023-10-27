@@ -3,7 +3,7 @@
 package bbgo
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (e *ExchangeOrderExecutor) OnTradeUpdate(cb func(trade types.Trade)) {

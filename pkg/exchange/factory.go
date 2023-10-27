@@ -5,13 +5,13 @@ import (
 	"os"
 	"strings"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bitget"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/kucoin"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/max"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/okex"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bitget"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/kucoin"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/max"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/okex"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func NewPublic(exchangeName types.ExchangeName) (types.Exchange, error) {

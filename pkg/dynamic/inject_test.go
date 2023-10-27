@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/service"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/service"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func Test_injectField(t *testing.T) {

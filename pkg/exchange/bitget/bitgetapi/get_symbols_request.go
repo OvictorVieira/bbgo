@@ -6,7 +6,7 @@ package bitgetapi
 import (
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 type Symbol struct {

@@ -1,6 +1,6 @@
 // +heroku install ./cmd/bbgo
 
-module github.com/OvictorVieira/bbgo
+module github.com/OvictorVieira/promeheux.api
 
 go 1.18
 

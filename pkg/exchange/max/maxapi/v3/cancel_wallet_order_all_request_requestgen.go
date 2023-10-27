@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"regexp"
 
-	max "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
+	max "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
 )
 
 func (c *CancelWalletOrderAllRequest) Side(side string) *CancelWalletOrderAllRequest {

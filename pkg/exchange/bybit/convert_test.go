@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi"
-	v3 "github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi/v3"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi"
+	v3 "github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi/v3"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 	"github.com/stretchr/testify/assert"
 )
 

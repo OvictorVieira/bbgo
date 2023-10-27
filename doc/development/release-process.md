@@ -47,4 +47,4 @@ The above command wilL:
 - Run git tag to create the tag.
 - Run git push to push the created tag.
 
-You can go to <https://github.com/OvictorVieira/bbgo/releases/v1.20.2> to modify the changelog
+You can go to <https://github.com/OvictorVieira/promeheux.api/releases/v1.20.2> to modify the changelog

@@ -3,8 +3,8 @@ package bitget
 import (
 	"github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bitget/bitgetapi"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bitget/bitgetapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 const ID = "bitget"

@@ -7,8 +7,8 @@ import (
 
 	backoff2 "github.com/cenkalti/backoff/v4"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util/backoff"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util/backoff"
 )
 
 type advancedOrderCancelService interface {

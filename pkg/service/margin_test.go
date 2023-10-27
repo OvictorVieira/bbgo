@@ -9,8 +9,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance"
-	"github.com/OvictorVieira/bbgo/pkg/testutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance"
+	"github.com/OvictorVieira/promeheux.api/pkg/testutil"
 )
 
 func TestMarginService(t *testing.T) {

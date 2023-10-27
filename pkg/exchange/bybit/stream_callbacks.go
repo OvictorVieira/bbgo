@@ -3,7 +3,7 @@
 package bybit
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi"
 )
 
 func (s *Stream) OnBookEvent(cb func(e BookEvent)) {

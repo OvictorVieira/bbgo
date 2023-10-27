@@ -4,9 +4,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datatype/bools"
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/bools"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // based on "UT Bot Alerts by QuantNomad" from tradingview

@@ -1,6 +1,6 @@
 package types
 
-import "github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+import "github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 
 type ValueMap map[string]fixedpoint.Value
 

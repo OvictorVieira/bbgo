@@ -3,7 +3,7 @@
 package okex
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/exchange/okex/okexapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/okex/okexapi"
 )
 
 func (s *Stream) OnCandleEvent(cb func(candle Candle)) {

@@ -17,7 +17,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 
-	"github.com/OvictorVieira/bbgo/pkg/backtest"
+	"github.com/OvictorVieira/promeheux.api/pkg/backtest"
 )
 
 var log = logrus.WithField("component", "optimizer")

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/bybit/bybitapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/bybit/bybitapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type WsEvent struct {

@@ -1,6 +1,6 @@
 package okex
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 var (
 	// below are supported UTC timezone interval for okex

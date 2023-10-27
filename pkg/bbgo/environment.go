@@ -20,16 +20,16 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/tucnak/telebot.v2"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/interact"
-	"github.com/OvictorVieira/bbgo/pkg/notifier/slacknotifier"
-	"github.com/OvictorVieira/bbgo/pkg/notifier/telegramnotifier"
-	"github.com/OvictorVieira/bbgo/pkg/service"
-	googleservice "github.com/OvictorVieira/bbgo/pkg/service/google"
-	"github.com/OvictorVieira/bbgo/pkg/slack/slacklog"
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/interact"
+	"github.com/OvictorVieira/promeheux.api/pkg/notifier/slacknotifier"
+	"github.com/OvictorVieira/promeheux.api/pkg/notifier/telegramnotifier"
+	"github.com/OvictorVieira/promeheux.api/pkg/service"
+	googleservice "github.com/OvictorVieira/promeheux.api/pkg/service/google"
+	"github.com/OvictorVieira/promeheux.api/pkg/slack/slacklog"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
 )
 
 func init() {

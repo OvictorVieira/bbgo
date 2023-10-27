@@ -3,7 +3,7 @@ package binance
 import (
 	"context"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (e *Exchange) QueryHistoricalTrades(ctx context.Context, symbol string, limit uint64) ([]types.Trade, error) {

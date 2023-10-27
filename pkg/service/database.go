@@ -7,8 +7,8 @@ import (
 	"github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 
-	mysqlMigrations "github.com/OvictorVieira/bbgo/pkg/migrations/mysql"
-	sqlite3Migrations "github.com/OvictorVieira/bbgo/pkg/migrations/sqlite3"
+	mysqlMigrations "github.com/OvictorVieira/promeheux.api/pkg/migrations/mysql"
+	sqlite3Migrations "github.com/OvictorVieira/promeheux.api/pkg/migrations/sqlite3"
 )
 
 // reflect cache for database

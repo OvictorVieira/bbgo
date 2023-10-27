@@ -1,6 +1,6 @@
 package exchange
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 func GetSessionAttributes(exchange types.Exchange) (isMargin, isFutures, isIsolated bool, isolatedSymbol string) {
 	if marginExchange, ok := exchange.(types.MarginExchange); ok {

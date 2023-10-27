@@ -14,9 +14,9 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
-	"github.com/OvictorVieira/bbgo/pkg/util"
-	"github.com/OvictorVieira/bbgo/pkg/util/backoff"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/util"
+	"github.com/OvictorVieira/promeheux.api/pkg/util/backoff"
 )
 
 const memCacheExpiry = 5 * time.Minute

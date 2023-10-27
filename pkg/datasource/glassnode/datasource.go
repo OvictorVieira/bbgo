@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/datasource/glassnode/glassnodeapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/datasource/glassnode/glassnodeapi"
 )
 
 type DataSource struct {

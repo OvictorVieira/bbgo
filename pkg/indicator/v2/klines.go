@@ -1,6 +1,6 @@
 package indicatorv2
 
-import "github.com/OvictorVieira/bbgo/pkg/types"
+import "github.com/OvictorVieira/promeheux.api/pkg/types"
 
 const MaxNumOfKLines = 4_000
 

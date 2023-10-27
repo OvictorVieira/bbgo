@@ -7,8 +7,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/valyala/fastjson"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 var ErrIncorrectBookEntryElementLength = errors.New("incorrect book entry element length")

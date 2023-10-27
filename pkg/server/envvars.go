@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
 )
 
 func collectSessionEnvVars(sessions map[string]*bbgo.ExchangeSession) (envVars map[string]string, err error) {

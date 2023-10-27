@@ -7,9 +7,9 @@ import (
 
 	"github.com/wcharczuk/go-chart/v2"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/interact"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/interact"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (s *Strategy) InitDrawCommands(profit, cumProfit types.Series) {

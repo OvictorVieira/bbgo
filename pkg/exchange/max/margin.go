@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	v3 "github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi/v3"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	v3 "github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi/v3"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // TransferMarginAccountAsset transfers the asset into/out from the margin account

@@ -41,7 +41,7 @@ exchange_upper=$(echo -n $exchange | tr 'a-z' 'A-Z')
 
 
 info "downloading..."
-curl -O -L https://github.com/OvictorVieira/bbgo/releases/download/$version/$dist_file
+curl -O -L https://github.com/OvictorVieira/promeheux.api/releases/download/$version/$dist_file
 tar xzf $dist_file
 mv bbgo-dnum-$osf-$arch bbgo
 chmod +x bbgo

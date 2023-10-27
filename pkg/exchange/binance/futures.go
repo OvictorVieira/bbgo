@@ -10,9 +10,9 @@ import (
 	"github.com/google/uuid"
 	"go.uber.org/multierr"
 
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance/binanceapi"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance/binanceapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func (e *Exchange) queryFuturesClosedOrders(ctx context.Context, symbol string, since, until time.Time, lastOrderID uint64) (orders []types.Order, err error) {

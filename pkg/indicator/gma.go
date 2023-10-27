@@ -3,7 +3,7 @@ package indicator
 import (
 	"math"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Geometric Moving Average

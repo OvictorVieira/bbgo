@@ -10,8 +10,8 @@ import (
 
 	jsonpatch "github.com/evanphx/json-patch/v5"
 
-	"github.com/OvictorVieira/bbgo/pkg/backtest"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/backtest"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 type MetricValueFunc func(summaryReport *backtest.SummaryReport) float64

@@ -5,8 +5,8 @@ import (
 
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // rebate type：1 is commission rebate，2 is referral kickback

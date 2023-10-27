@@ -6,7 +6,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 	"github.com/c-bata/goptuna"
 	goptunaCMAES "github.com/c-bata/goptuna/cmaes"
 	goptunaSOBOL "github.com/c-bata/goptuna/sobol"

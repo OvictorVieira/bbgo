@@ -20,8 +20,8 @@ var wrapperTemplate = template.Must(template.New("main").Parse(`// Code generate
 package main
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/cmd"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/cmd"
 
 {{- range .Imports }}
 	_ "{{ . }}"

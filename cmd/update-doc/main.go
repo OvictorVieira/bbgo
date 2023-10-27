@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/cmd"
+	"github.com/OvictorVieira/promeheux.api/pkg/cmd"
 	"github.com/spf13/cobra/doc"
 	"log"
 	"path"

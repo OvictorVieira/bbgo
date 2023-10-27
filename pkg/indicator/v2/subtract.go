@@ -1,8 +1,8 @@
 package indicatorv2
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/datatype/floats"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/datatype/floats"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // SubtractStream subscribes 2 upstream data, and then subtract these 2 values

@@ -5,7 +5,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // generated from Binance 2022/07/27 00:00

@@ -9,12 +9,12 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/bbgo"
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
-	. "github.com/OvictorVieira/bbgo/pkg/indicator/v2"
-	"github.com/OvictorVieira/bbgo/pkg/risk/riskcontrol"
-	"github.com/OvictorVieira/bbgo/pkg/strategy/common"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/bbgo"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
+	. "github.com/OvictorVieira/promeheux.api/pkg/indicator/v2"
+	"github.com/OvictorVieira/promeheux.api/pkg/risk/riskcontrol"
+	"github.com/OvictorVieira/promeheux.api/pkg/strategy/common"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 const ID = "scmaker"

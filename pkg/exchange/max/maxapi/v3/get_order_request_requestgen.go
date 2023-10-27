@@ -6,7 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/max/maxapi"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/max/maxapi"
 	"net/url"
 	"reflect"
 	"regexp"

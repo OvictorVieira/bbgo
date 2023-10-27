@@ -23,4 +23,4 @@ If you already have the configuration somewhere, you may want to use the downloa
 bash <(curl -s https://raw.githubusercontent.com/c9s/bbgo/main/scripts/download-dnum.sh)
 ```
 
-The precompiled dnum binaries are also available in the [Release Page](https://github.com/OvictorVieira/bbgo/releases).
+The precompiled dnum binaries are also available in the [Release Page](https://github.com/OvictorVieira/promeheux.api/releases).

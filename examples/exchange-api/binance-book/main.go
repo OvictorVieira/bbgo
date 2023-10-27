@@ -10,9 +10,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/OvictorVieira/bbgo/pkg/cmd/cmdutil"
-	"github.com/OvictorVieira/bbgo/pkg/exchange/binance"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/cmd/cmdutil"
+	"github.com/OvictorVieira/promeheux.api/pkg/exchange/binance"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 func init() {

@@ -6,7 +6,7 @@ package bitgetapi
 import (
 	"github.com/c9s/requestgen"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type ServerTime = types.MillisecondTimestamp

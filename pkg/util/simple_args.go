@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
+	"github.com/OvictorVieira/promeheux.api/pkg/fixedpoint"
 )
 
 // FilterSimpleArgs filters out the simple type arguments

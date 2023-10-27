@@ -10,7 +10,7 @@
 # Check CHANGELOG.md to see your results
 
 # Repo URL to base links off of
-REPOSITORY_URL=https://github.com/OvictorVieira/bbgo
+REPOSITORY_URL=https://github.com/OvictorVieira/promeheux.api
 
 # Get a list of all tags in reverse order
 # Assumes the tags are in version format like v1.2.3

@@ -3,8 +3,8 @@ package bbgo
 import (
 	"github.com/sirupsen/logrus"
 
-	"github.com/OvictorVieira/bbgo/pkg/indicator/v2"
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/indicator/v2"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // IndicatorSet is the v2 standard indicator set

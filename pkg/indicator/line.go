@@ -3,7 +3,7 @@ package indicator
 import (
 	"time"
 
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 // Line indicator is a utility that helps to simulate either the

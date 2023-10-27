@@ -1,7 +1,7 @@
 package indicatorv2
 
 import (
-	"github.com/OvictorVieira/bbgo/pkg/types"
+	"github.com/OvictorVieira/promeheux.api/pkg/types"
 )
 
 type RSIStream struct {
