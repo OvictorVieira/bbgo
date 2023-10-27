@@ -19,7 +19,7 @@ import (
 var ErrTradeNotFound = errors.New("trade not found")
 
 type QueryTradesOptions struct {
-	Exchange types.ExchangeName
+	Exchange types.ExchangeId
 	Sessions []string
 	Symbol   string
 	LastGID  int64
@@ -252,8 +252,8 @@ func generateMysqlTradingVolumeQuerySQL(options TradingVolumeQueryOptions) strin
 	return sql
 }
 
-func (s *TradeService) QueryForTradingFeeCurrency(ex types.ExchangeName, symbol string, feeCurrency string) ([]types.Trade, error) {
-	sql := "SELECT * FROM trades WHERE exchange = :exchange AND (symbol = :symbol OR fee_currency = :fee_currency) ORDER BY traded_at ASC"
+func (s *TradeService) QueryForTradingFeeCurrency(ex types.ExchangeId, symbol string, feeCurrency string) ([]types.Trade, error) {
+	sql := "SELECT * FROM trades WHERE user_exchanges_id = :user_exchanges_id AND (symbol = :symbol OR fee_currency = :fee_currency) ORDER BY traded_at ASC"
 	rows, err := s.DB.NamedQuery(sql, map[string]interface{}{
 		"exchange":     ex,
 		"symbol":       symbol,
@@ -399,7 +399,7 @@ func (s *TradeService) DeleteAll() error {
 	return err
 }
 
-func SelectLastTrades(ex types.ExchangeName, symbol string, isMargin, isFutures, isIsolated bool, limit uint64) sq.SelectBuilder {
+func SelectLastTrades(ex types.ExchangeId, symbol string, isMargin, isFutures, isIsolated bool, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("trades").
 		Where(sq.And{

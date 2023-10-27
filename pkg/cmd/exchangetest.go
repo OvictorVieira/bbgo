@@ -25,7 +25,7 @@ var exchangeTestCmd = &cobra.Command{
 			return err
 		}
 
-		exchangeName, err := types.ValidExchangeName(exchangeNameStr)
+		exchangeName, err := types.ValidExchangeId(exchangeNameStr)
 		if err != nil {
 			return err
 		}

@@ -63,7 +63,7 @@ func (s *DepositService) Sync(ctx context.Context, ex types.Exchange, startTime 
 	return nil
 }
 
-func (s *DepositService) Query(exchangeName types.ExchangeName) ([]types.Deposit, error) {
+func (s *DepositService) Query(exchangeName types.ExchangeId) ([]types.Deposit, error) {
 	args := map[string]interface{}{
 		"exchange": exchangeName,
 	}
@@ -91,7 +91,7 @@ func (s *DepositService) scanRows(rows *sqlx.Rows) (deposits []types.Deposit, er
 	return deposits, rows.Err()
 }
 
-func SelectLastDeposits(ex types.ExchangeName, limit uint64) sq.SelectBuilder {
+func SelectLastDeposits(ex types.ExchangeId, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("deposits").
 		Where(sq.And{

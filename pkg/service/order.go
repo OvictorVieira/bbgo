@@ -85,7 +85,7 @@ func (s *OrderService) Sync(ctx context.Context, exchange types.Exchange, symbol
 	return nil
 }
 
-func SelectLastOrders(ex types.ExchangeName, symbol string, isMargin, isFutures, isIsolated bool, limit uint64) sq.SelectBuilder {
+func SelectLastOrders(ex types.ExchangeId, symbol string, isMargin, isFutures, isIsolated bool, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("orders").
 		Where(sq.And{
@@ -105,7 +105,7 @@ type AggOrder struct {
 }
 
 type QueryOrdersOptions struct {
-	Exchange types.ExchangeName
+	Exchange types.ExchangeId
 	Symbol   string
 	LastGID  int64
 	Ordering string

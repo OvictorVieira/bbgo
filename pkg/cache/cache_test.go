@@ -68,7 +68,7 @@ func Test_loadMarketsFromMem(t *testing.T) {
 	defer mockCtrl.Finish()
 
 	mockEx := mocks.NewMockExchange(mockCtrl)
-	mockEx.EXPECT().Name().Return(types.ExchangeName("max")).AnyTimes()
+	mockEx.EXPECT().Name().Return(types.ExchangeId("max")).AnyTimes()
 	mockEx.EXPECT().QueryMarkets(gomock.Any()).Return(nil, errors.New("faked")).Times(1)
 	mockEx.EXPECT().QueryMarkets(gomock.Any()).Return(types.MarketMap{
 		"btctwd": types.Market{

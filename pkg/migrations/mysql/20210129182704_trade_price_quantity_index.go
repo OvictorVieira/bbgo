@@ -14,7 +14,7 @@ func init() {
 func upTradePriceQuantityIndex(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 	// This code is executed when the migration is applied.
 
-	_, err = tx.ExecContext(ctx, "CREATE INDEX trades_price_quantity ON trades (order_id,price,quantity);")
+	_, err = tx.ExecContext(ctx, "CREATE INDEX trades_price_quantity ON trades (order_id, price, quantity);")
 	if err != nil {
 		return err
 	}

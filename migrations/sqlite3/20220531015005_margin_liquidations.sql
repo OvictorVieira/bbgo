@@ -1,29 +1,33 @@
 -- +up
 CREATE TABLE `margin_liquidations`
 (
-    `gid`               INTEGER PRIMARY KEY AUTOINCREMENT,
+    `gid`                       BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
 
-    `exchange`          VARCHAR(24)    NOT NULL DEFAULT '',
+    `user_exchanges_id`         BIGINT                  NOT NULL,
 
-    `symbol`            VARCHAR(24)    NOT NULL DEFAULT '',
+    `symbol`                    VARCHAR(24)             NOT NULL DEFAULT '',
 
-    `order_id`          INTEGER        NOT NULL,
+    `order_id`                  BIGINT UNSIGNED         NOT NULL,
 
-    `is_isolated`       BOOL           NOT NULL DEFAULT false,
+    `is_isolated`               BOOL                    NOT NULL DEFAULT false,
 
-    `average_price`     DECIMAL(16, 8) NOT NULL,
+    `average_price`             DECIMAL(16, 8) UNSIGNED NOT NULL,
 
-    `price`             DECIMAL(16, 8) NOT NULL,
+    `price`                     DECIMAL(16, 8) UNSIGNED NOT NULL,
 
-    `quantity`          DECIMAL(16, 8) NOT NULL,
+    `quantity`                  DECIMAL(16, 8) UNSIGNED NOT NULL,
 
-    `executed_quantity` DECIMAL(16, 8) NOT NULL,
+    `executed_quantity`         DECIMAL(16, 8) UNSIGNED NOT NULL,
 
-    `side`              VARCHAR(5)     NOT NULL DEFAULT '',
+    `side`                      VARCHAR(5)              NOT NULL DEFAULT '',
 
-    `time_in_force`     VARCHAR(5)     NOT NULL DEFAULT '',
+    `time_in_force`             VARCHAR(5)              NOT NULL DEFAULT '',
 
-    `time`      DATETIME(3)    NOT NULL
+    `time`                      DATETIME(3)             NOT NULL,
+
+    PRIMARY KEY (`gid`),
+    UNIQUE KEY (`order_id`, `user_exchanges_id`),
+    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)
 );
 
 -- +down

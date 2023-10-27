@@ -753,14 +753,14 @@ func (s *Strategy) CrossRun(ctx context.Context, orderExecutionRouter bbgo.Order
 	}
 
 	if s.makerSession.MakerFeeRate.Sign() > 0 || s.makerSession.TakerFeeRate.Sign() > 0 {
-		s.Position.SetExchangeFeeRate(types.ExchangeName(s.MakerExchange), types.ExchangeFee{
+		s.Position.SetExchangeFeeRate(types.ExchangeId(s.MakerExchange), types.ExchangeFee{
 			MakerFeeRate: s.makerSession.MakerFeeRate,
 			TakerFeeRate: s.makerSession.TakerFeeRate,
 		})
 	}
 
 	if s.sourceSession.MakerFeeRate.Sign() > 0 || s.sourceSession.TakerFeeRate.Sign() > 0 {
-		s.Position.SetExchangeFeeRate(types.ExchangeName(s.SourceExchange), types.ExchangeFee{
+		s.Position.SetExchangeFeeRate(types.ExchangeId(s.SourceExchange), types.ExchangeFee{
 			MakerFeeRate: s.sourceSession.MakerFeeRate,
 			TakerFeeRate: s.sourceSession.TakerFeeRate,
 		})

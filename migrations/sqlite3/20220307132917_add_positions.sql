@@ -1,26 +1,30 @@
 -- +up
 CREATE TABLE `positions`
 (
-    `gid`                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    `gid`                  BIGINT UNSIGNED         NOT NULL AUTO_INCREMENT,
 
-    `strategy`             VARCHAR(32)    NOT NULL,
-    `strategy_instance_id` VARCHAR(64)    NOT NULL,
+    `strategy`             VARCHAR(32)             NOT NULL,
+    `strategy_instance_id` VARCHAR(64)             NOT NULL,
 
-    `symbol`               VARCHAR(20)    NOT NULL,
-    `quote_currency`       VARCHAR(10)    NOT NULL,
-    `base_currency`        VARCHAR(10)    NOT NULL,
+    `symbol`               VARCHAR(20)             NOT NULL,
+    `quote_currency`       VARCHAR(10)             NOT NULL,
+    `base_currency`        VARCHAR(10)             NOT NULL,
 
     -- average_cost is the position average cost
-    `average_cost`         DECIMAL(16, 8) NOT NULL,
-    `base`                 DECIMAL(16, 8) NOT NULL,
-    `quote`                DECIMAL(16, 8) NOT NULL,
-    `profit`               DECIMAL(16, 8) NULL,
+    `average_cost`         DECIMAL(16, 8) UNSIGNED NOT NULL,
+    `base`                 DECIMAL(16, 8)          NOT NULL,
+    `quote`                DECIMAL(16, 8)          NOT NULL,
+    `profit`               DECIMAL(16, 8)          NULL,
 
     -- trade related columns
-    `trade_id`             BIGINT         NOT NULL,
-    `side`                 VARCHAR(4)     NOT NULL, -- side of the trade
-    `exchange`             VARCHAR(12)    NOT NULL, -- exchange of the trade
-    `traded_at`            DATETIME(3)    NOT NULL
+    `trade_id`             BIGINT UNSIGNED         NOT NULL, -- the trade id in the exchange
+    `side`                 VARCHAR(4)              NOT NULL, -- side of the trade
+    `user_exchanges_id`    BIGINT                  NOT NULL, -- exchange of the trade
+    `traded_at`            DATETIME(3)             NOT NULL, -- millisecond timestamp
+
+    PRIMARY KEY (`gid`),
+    UNIQUE KEY `trade_id` (`trade_id`, `side`, `user_exchanges_id`),
+    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)
 );
 
 -- +down

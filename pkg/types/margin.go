@@ -61,7 +61,7 @@ type MarginBorrowRepayService interface {
 
 type MarginInterest struct {
 	GID            uint64           `json:"gid" db:"gid"`
-	Exchange       ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange       ExchangeId       `json:"exchange" db:"exchange"`
 	Asset          string           `json:"asset" db:"asset"`
 	Principle      fixedpoint.Value `json:"principle" db:"principle"`
 	Interest       fixedpoint.Value `json:"interest" db:"interest"`
@@ -72,7 +72,7 @@ type MarginInterest struct {
 
 type MarginLoan struct {
 	GID            uint64           `json:"gid" db:"gid"`
-	Exchange       ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange       ExchangeId       `json:"exchange" db:"exchange"`
 	TransactionID  uint64           `json:"transactionID" db:"transaction_id"`
 	Asset          string           `json:"asset" db:"asset"`
 	Principle      fixedpoint.Value `json:"principle" db:"principle"`
@@ -82,7 +82,7 @@ type MarginLoan struct {
 
 type MarginRepay struct {
 	GID            uint64           `json:"gid" db:"gid"`
-	Exchange       ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange       ExchangeId       `json:"exchange" db:"exchange"`
 	TransactionID  uint64           `json:"transactionID" db:"transaction_id"`
 	Asset          string           `json:"asset" db:"asset"`
 	Principle      fixedpoint.Value `json:"principle" db:"principle"`
@@ -92,7 +92,7 @@ type MarginRepay struct {
 
 type MarginLiquidation struct {
 	GID              uint64           `json:"gid" db:"gid"`
-	Exchange         ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange         ExchangeId       `json:"exchange" db:"exchange"`
 	AveragePrice     fixedpoint.Value `json:"averagePrice" db:"average_price"`
 	ExecutedQuantity fixedpoint.Value `json:"executedQuantity" db:"executed_quantity"`
 	OrderID          uint64           `json:"orderID" db:"order_id"`

@@ -37,13 +37,13 @@ type ExchangeSession struct {
 	// ---------------------------
 
 	// Exchange Session name
-	Name         string             `json:"name,omitempty" yaml:"name,omitempty"`
-	ExchangeName types.ExchangeName `json:"exchange" yaml:"exchange"`
-	EnvVarPrefix string             `json:"envVarPrefix" yaml:"envVarPrefix"`
-	Key          string             `json:"key,omitempty" yaml:"key,omitempty"`
-	Secret       string             `json:"secret,omitempty" yaml:"secret,omitempty"`
-	Passphrase   string             `json:"passphrase,omitempty" yaml:"passphrase,omitempty"`
-	SubAccount   string             `json:"subAccount,omitempty" yaml:"subAccount,omitempty"`
+	Name         string           `json:"name,omitempty" yaml:"name,omitempty"`
+	ExchangeName types.ExchangeId `json:"exchange" yaml:"exchange"`
+	EnvVarPrefix string           `json:"envVarPrefix" yaml:"envVarPrefix"`
+	Key          string           `json:"key,omitempty" yaml:"key,omitempty"`
+	Secret       string           `json:"secret,omitempty" yaml:"secret,omitempty"`
+	Passphrase   string           `json:"passphrase,omitempty" yaml:"passphrase,omitempty"`
+	SubAccount   string           `json:"subAccount,omitempty" yaml:"subAccount,omitempty"`
 
 	// Withdrawal is used for enabling withdrawal functions
 	Withdrawal              bool             `json:"withdrawal,omitempty" yaml:"withdrawal,omitempty"`
@@ -760,7 +760,7 @@ func (session *ExchangeSession) FindPossibleSymbols() (symbols []string, err err
 }
 
 // newBasicPrivateExchange allocates a basic exchange instance with the user private credentials
-func (session *ExchangeSession) newBasicPrivateExchange(exchangeName types.ExchangeName) (types.Exchange, error) {
+func (session *ExchangeSession) newBasicPrivateExchange(exchangeName types.ExchangeId) (types.Exchange, error) {
 	var err error
 	var exMinimal types.ExchangeMinimal
 	if session.Key != "" && session.Secret != "" {

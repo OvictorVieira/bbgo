@@ -44,8 +44,8 @@ type Position struct {
 	// This is used for calculating net profit
 	ApproximateAverageCost fixedpoint.Value `json:"approximateAverageCost"`
 
-	FeeRate          *ExchangeFee                 `json:"feeRate,omitempty"`
-	ExchangeFeeRates map[ExchangeName]ExchangeFee `json:"exchangeFeeRates"`
+	FeeRate          *ExchangeFee               `json:"feeRate,omitempty"`
+	ExchangeFeeRates map[ExchangeId]ExchangeFee `json:"exchangeFeeRates"`
 
 	// TotalFee stores the fee currency -> total fee quantity
 	TotalFee map[string]fixedpoint.Value `json:"totalFee" db:"-"`
@@ -263,8 +263,8 @@ type FuturesPosition struct {
 	// This is used for calculating net profit
 	ApproximateAverageCost fixedpoint.Value `json:"approximateAverageCost"`
 
-	FeeRate          *ExchangeFee                 `json:"feeRate,omitempty"`
-	ExchangeFeeRates map[ExchangeName]ExchangeFee `json:"exchangeFeeRates"`
+	FeeRate          *ExchangeFee               `json:"feeRate,omitempty"`
+	ExchangeFeeRates map[ExchangeId]ExchangeFee `json:"exchangeFeeRates"`
 
 	// Futures data fields
 	Isolated     bool  `json:"isolated"`
@@ -313,9 +313,9 @@ func (p *Position) SetFeeRate(exchangeFee ExchangeFee) {
 	p.FeeRate = &exchangeFee
 }
 
-func (p *Position) SetExchangeFeeRate(ex ExchangeName, exchangeFee ExchangeFee) {
+func (p *Position) SetExchangeFeeRate(ex ExchangeId, exchangeFee ExchangeFee) {
 	if p.ExchangeFeeRates == nil {
-		p.ExchangeFeeRates = make(map[ExchangeName]ExchangeFee)
+		p.ExchangeFeeRates = make(map[ExchangeId]ExchangeFee)
 	}
 
 	p.ExchangeFeeRates[ex] = exchangeFee

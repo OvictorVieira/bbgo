@@ -5,7 +5,6 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/OvictorVieira/bbgo/pkg/fixedpoint"
@@ -13,43 +12,43 @@ import (
 
 const DateFormat = "2006-01-02"
 
-type ExchangeName string
+type ExchangeId int
 
-func (n *ExchangeName) Value() (driver.Value, error) {
-	return n.String(), nil
+func (eid *ExchangeId) Value() (driver.Value, error) {
+	return eid.String(), nil
 }
 
-func (n *ExchangeName) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+func (eid *ExchangeId) UnmarshalJSON(data []byte) error {
+	var exchangeId int
+	if err := json.Unmarshal(data, &exchangeId); err != nil {
 		return err
 	}
 
-	switch s {
-	case "max", "binance", "okex", "kucoin":
-		*n = ExchangeName(s)
+	switch exchangeId {
+	case 1, 2, 3, 4:
+		*eid = ExchangeId(exchangeId)
 		return nil
 
 	}
 
-	return fmt.Errorf("unknown or unsupported exchange name: %s, valid names are: max, binance, okex, kucoin", s)
+	return fmt.Errorf("unknown or unsupported exchange name: %d, valid names are: max, binance, okex, kucoin", exchangeId)
 }
 
-func (n ExchangeName) String() string {
-	return string(n)
+func (eid ExchangeId) String() string {
+	return string(rune(eid))
 }
 
 const (
-	ExchangeMax      ExchangeName = "max"
-	ExchangeBinance  ExchangeName = "binance"
-	ExchangeOKEx     ExchangeName = "okex"
-	ExchangeKucoin   ExchangeName = "kucoin"
-	ExchangeBitget   ExchangeName = "bitget"
-	ExchangeBacktest ExchangeName = "backtest"
-	ExchangeBybit    ExchangeName = "bybit"
+	ExchangeMax      ExchangeId = 1
+	ExchangeBinance  ExchangeId = 2
+	ExchangeOKEx     ExchangeId = 3
+	ExchangeKucoin   ExchangeId = 4
+	ExchangeBitget   ExchangeId = 5
+	ExchangeBacktest ExchangeId = 6
+	ExchangeBybit    ExchangeId = 7
 )
 
-var SupportedExchanges = []ExchangeName{
+var SupportedExchanges = []ExchangeId{
 	ExchangeMax,
 	ExchangeBinance,
 	ExchangeOKEx,
@@ -59,19 +58,18 @@ var SupportedExchanges = []ExchangeName{
 	// note: we are not using "backtest"
 }
 
-func ValidExchangeName(a string) (ExchangeName, error) {
-	aa := strings.ToLower(a)
+func ValidExchangeId(a int) (ExchangeId, error) {
 	for _, n := range SupportedExchanges {
-		if string(n) == aa {
+		if n == ExchangeId(a) { // Convert 'a' to 'ExchangeId' before comparing
 			return n, nil
 		}
 	}
 
-	return "", fmt.Errorf("invalid exchange name: %s", a)
+	return 0, fmt.Errorf("invalid exchange id: %d", a) // use %d for integer formatting
 }
 
 type ExchangeMinimal interface {
-	Name() ExchangeName
+	Name() ExchangeId
 	PlatformFeeCurrency() string
 }
 

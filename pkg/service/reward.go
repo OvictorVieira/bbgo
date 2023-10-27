@@ -67,7 +67,7 @@ func (s *RewardService) Sync(ctx context.Context, exchange types.Exchange, start
 
 type CurrencyPositionMap map[string]fixedpoint.Value
 
-func (s *RewardService) AggregateUnspentCurrencyPosition(ctx context.Context, ex types.ExchangeName, since time.Time) (CurrencyPositionMap, error) {
+func (s *RewardService) AggregateUnspentCurrencyPosition(ctx context.Context, ex types.ExchangeId, since time.Time) (CurrencyPositionMap, error) {
 	m := make(CurrencyPositionMap)
 
 	rewards, err := s.QueryUnspentSince(ctx, ex, since)
@@ -82,7 +82,7 @@ func (s *RewardService) AggregateUnspentCurrencyPosition(ctx context.Context, ex
 	return m, nil
 }
 
-func (s *RewardService) QueryUnspentSince(ctx context.Context, ex types.ExchangeName, since time.Time, rewardTypes ...types.RewardType) ([]types.Reward, error) {
+func (s *RewardService) QueryUnspentSince(ctx context.Context, ex types.ExchangeId, since time.Time, rewardTypes ...types.RewardType) ([]types.Reward, error) {
 	sql := "SELECT * FROM rewards WHERE created_at >= :since AND exchange = :exchange AND spent IS FALSE "
 
 	if len(rewardTypes) == 0 {
@@ -110,7 +110,7 @@ func (s *RewardService) QueryUnspentSince(ctx context.Context, ex types.Exchange
 	return s.scanRows(rows)
 }
 
-func (s *RewardService) QueryUnspent(ctx context.Context, ex types.ExchangeName, rewardTypes ...types.RewardType) ([]types.Reward, error) {
+func (s *RewardService) QueryUnspent(ctx context.Context, ex types.ExchangeId, rewardTypes ...types.RewardType) ([]types.Reward, error) {
 	sql := "SELECT * FROM rewards WHERE exchange = :exchange AND spent IS FALSE "
 	if len(rewardTypes) == 0 {
 		sql += " AND `reward_type` NOT IN ('airdrop') "
@@ -188,7 +188,7 @@ func (s *RewardService) Insert(reward types.Reward) error {
 	return err
 }
 
-func SelectLastRewards(ex types.ExchangeName, limit uint64) sq.SelectBuilder {
+func SelectLastRewards(ex types.ExchangeId, limit uint64) sq.SelectBuilder {
 	return sq.Select("*").
 		From("rewards").
 		Where(sq.And{

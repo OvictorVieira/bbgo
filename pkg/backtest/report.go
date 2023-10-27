@@ -68,7 +68,7 @@ func ReadSummaryReport(filename string) (*SummaryReport, error) {
 // SessionSymbolReport is the report per exchange session
 // trades are merged, collected and re-calculated
 type SessionSymbolReport struct {
-	Exchange        types.ExchangeName        `json:"exchange"`
+	Exchange        types.ExchangeId          `json:"exchange"`
 	Symbol          string                    `json:"symbol,omitempty"`
 	Intervals       []types.Interval          `json:"intervals,omitempty"`
 	Subscriptions   []types.Subscription      `json:"subscriptions"`

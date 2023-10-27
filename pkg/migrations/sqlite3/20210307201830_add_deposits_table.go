@@ -14,12 +14,7 @@ func init() {
 func upAddDepositsTable(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 	// This code is executed when the migration is applied.
 
-	_, err = tx.ExecContext(ctx, "CREATE TABLE `deposits`\n(\n    `gid`      INTEGER PRIMARY KEY AUTOINCREMENT,\n    `exchange` VARCHAR(24)    NOT NULL,\n    -- asset is the asset name (currency)\n    `asset`    VARCHAR(10)    NOT NULL,\n    `address`  VARCHAR(128)    NOT NULL DEFAULT '',\n    `amount`   DECIMAL(16, 8) NOT NULL,\n    `txn_id`   VARCHAR(256)    NOT NULL,\n    `time`     DATETIME(3)    NOT NULL\n);")
-	if err != nil {
-		return err
-	}
-
-	_, err = tx.ExecContext(ctx, "CREATE UNIQUE INDEX `deposits_txn_id` ON `deposits` (`exchange`, `txn_id`);")
+	_, err = tx.ExecContext(ctx, "CREATE TABLE `deposits`\n(\n    `gid`                       BIGINT          UNSIGNED        NOT NULL AUTO_INCREMENT,\n    `user_exchanges_id`         BIGINT                          NOT NULL,\n    -- asset is the asset name (currency)\n    `asset`                     VARCHAR(10)                     NOT NULL,\n    `address`                   VARCHAR(128)                    NOT NULL DEFAULT '',\n    `amount`                    DECIMAL(16, 8)                  NOT NULL,\n    `txn_id`                    VARCHAR(256)                    NOT NULL,\n    `time`                      DATETIME(3)                     NOT NULL,\n    PRIMARY KEY (`gid`),\n    UNIQUE KEY `txn_id` (`user_exchanges_id`, `txn_id`),\n    FOREIGN KEY (`user_exchanges_id`) REFERENCES user_exchanges(id)\n);")
 	if err != nil {
 		return err
 	}
@@ -29,11 +24,6 @@ func upAddDepositsTable(ctx context.Context, tx rockhopper.SQLExecutor) (err err
 
 func downAddDepositsTable(ctx context.Context, tx rockhopper.SQLExecutor) (err error) {
 	// This code is executed when the migration is rolled back.
-
-	_, err = tx.ExecContext(ctx, "DROP INDEX IF EXISTS `deposits_txn_id`;")
-	if err != nil {
-		return err
-	}
 
 	_, err = tx.ExecContext(ctx, "DROP TABLE IF EXISTS `deposits`;")
 	if err != nil {

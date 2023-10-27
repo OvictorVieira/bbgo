@@ -22,7 +22,7 @@ const (
 type Reward struct {
 	GID       int64            `json:"gid" db:"gid"`
 	UUID      string           `json:"uuid" db:"uuid"`
-	Exchange  ExchangeName     `json:"exchange" db:"exchange"`
+	Exchange  ExchangeId       `json:"exchange" db:"exchange"`
 	Type      RewardType       `json:"reward_type" db:"reward_type"`
 	Currency  string           `json:"currency" db:"currency"`
 	Quantity  fixedpoint.Value `json:"quantity" db:"quantity"`

@@ -60,7 +60,7 @@ func New(key, secret string) *Exchange {
 	}
 }
 
-func (e *Exchange) Name() types.ExchangeName {
+func (e *Exchange) Name() types.ExchangeId {
 	return types.ExchangeMax
 }
 

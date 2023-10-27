@@ -55,10 +55,10 @@ func (mr *MockExchangeMockRecorder) CancelOrders(arg0 interface{}, arg1 ...inter
 }
 
 // Name mocks base method.
-func (m *MockExchange) Name() types.ExchangeName {
+func (m *MockExchange) Name() types.ExchangeId {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Name")
-	ret0, _ := ret[0].(types.ExchangeName)
+	ret0, _ := ret[0].(types.ExchangeId)
 	return ret0
 }
 
